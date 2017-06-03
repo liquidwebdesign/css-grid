@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Flexbox</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="stylesheet" href="../css/app.css">
+	<style>
+		
+		.container {
+			background-color: #ddd;			
+			height: 600px;
+			margin: 0 auto;
+			display: flex;
+			flex-flow: column wrap;
+		}
+
+		.item {			
+			color: #333;
+			background: #f9f9f9;
+			margin: 10px;
+			padding: 10px;			
+			width: 200px;
+			min-height: 150px;
+			/*width: 60px; */
+			/*height: 60px;			*/
+			/*flex-grow: 1;*/
+		}
+
+		.item1 {
+			flex: 1 0 auto;
+		}
+
+		.item2 {
+			flex: 1 0 auto;
+		}
+
+		.item3 {
+			flex: 1 0 auto;
+		}
+
+		.item4 {
+			flex: 1 0 auto;
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<h1>Flexbox</h1>
+	<div class="container">
+		<div class="item item1">
+			<h3>ITEM 1</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis culpa adipisci atque quidem, soluta placeat earum, recusandae expedita sapiente, ipsam dolorem voluptates incidunt repellat odio quas et sequi eius laboriosam!</p>
+		</div>
+		<div class="item item2">
+			<h3>ITEM 2</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis culpa adipisci atque quidem, soluta placeat earum, recusandae expedita sapiente, ipsam dolorem voluptates incidunt repellat odio quas et sequi eius laboriosam!</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, dolores possimus officiis nemo error inventore rerum debitis minus expedita rem?</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, dolores possimus officiis nemo error inventore rerum debitis minus expedita rem?</p>
+		</div>
+		<div class="item item3">
+			<h3>ITEM 3</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, dolores possimus officiis nemo error inventore rerum debitis minus expedita rem?</p>
+		</div>
+		<div class="item item4">
+			<h3>ITEM 4</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, dolores possimus officiis nemo error inventore rerum debitis minus expedita rem?</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, dolores possimus officiis nemo error inventore rerum debitis minus expedita rem?</p>
+		</div>
+	</div>
+</body>
+
+</html>

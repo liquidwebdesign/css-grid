@@ -3,38 +3,41 @@
 @import "base/media-queries";
 
 body {
-    font-family: 'Cantarell', sans-serif;
-    
+	padding: 1rem;
+	font-family: 'Cantarell', sans-serif;
 }
 
-.index__grid {
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+ul {
+	margin-bottom: 8px;
+}
+
+.index__grid {	
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
 }
 
 h1 {
-    font-family: 'Fjalla One', sans-serif;
-    font-weight: normal;
-    text-transform: uppercase;
-    line-height: 46px;
-    font-size: 43px;
-    margin: 0 0 23px 0;
+	font-family: 'Fjalla One', sans-serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	line-height: 46px;
+	font-size: 43px;
+	margin: 0 0 24px 0;
 }
 
 h2 {
-    font-family: 'Cantarell', sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    margin: 0 0 23px 0;
+	font-family: 'Cantarell', sans-serif;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 23px;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	margin: 0 0 24px 0;
 }
 
 p {
-    font-family: 'Cantarell', sans-serif;
-    font-size: 17px;
-    line-height: 23px;
-    margin: 0 0 23px 0;
+	font-family: 'Cantarell', sans-serif;
+	font-size: 17px;
+	line-height: 23px;
+	margin: 0 0 23px 0;
 }
