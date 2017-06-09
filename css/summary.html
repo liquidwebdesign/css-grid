@@ -26,27 +26,21 @@
 		h2 {
 			font-family: Georgia;
 			font-size: 1.4em
-			font-weight: normal;
-			
+			font-weight: normal;			
 		}
 
-		p {
-			font-size: 1em;
-			color: brown;			
+		aside > p {
+			font-size: 2rem;
+			color: red;
+		}	
+
+		h2 + h3 {
+			color: green;
+			font-size: 2.5rem;
 		}
 
-		div {
-			background-color: #ccc;
-			padding: 10px;
-		}
-
-		.aside1 {
-			border: 1px solid green;
-			margin-bottom: 10px;
-		}
-
-		.aside2 {
-			border: 1px solid red;
+		a[title="Carl Title"] {
+			font-size: 2rem;
 		}
 
 	</style>	
@@ -58,40 +52,24 @@
 
 	<h2>Syntax</h2>
 
-	<h3 style="color: blue;">Selector and declaration</h3>
+	<aside>
 
-	<code>
-		p {
-		font-size: 16px;
-		color: blue;
-	}
-</code>
+	<a href="#" title="Carl Title">Here is a link with Carl Title</a>
 
-<aside class="aside1">
+		<p>Declarations have properties and values. In the example above font-size and color are considered properties whilst 16px and blue are the respective values.</p>
 
-	<h2>Inside Heading</h2>
+		<h2>Inside Heading</h2>
 
-	<p>Declarations have properties and values. In the example above font-size and color are considered properties whilst 16px and blue are the respective values.</p>
-	
-</aside>
+		<h3>Adjacent Heading</h3>
 
-<aside class="aside2">
+		<div>
+			<p>Declarations have properties and values. In the example above font-size and color are considered properties whilst 16px and blue are the respective values.</p>
+		</div>
 
-	<h2>Inside Heading</h2>
-
-	<p>Declarations have properties and values. In the example above font-size and color are considered properties whilst 16px and blue are the respective values.</p>
-	
-</aside>
-
-<p>Declarations have properties and values. In the example above font-size and color are considered properties whilst 16px and blue are the respective values.</p>
-
-<h1>This is a heading</h1>
-
-<div>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat accusamus neque ducimus eos dolorum perferendis molestiae sequi, quibusdam vero velit!</p>
-</div>
+		<h3>Last Heading</h3>
 
 
+	</aside>
 
 </body>
 </html>
