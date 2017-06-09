@@ -29,9 +29,9 @@
 			font-weight: normal;			
 		}
 
-		aside > p {
+		p:first-of-type {
 			font-size: 2rem;
-			color: red;
+			color: orange;
 		}	
 
 		h2 + h3 {
@@ -41,6 +41,11 @@
 
 		a[title="Carl Title"] {
 			font-size: 2rem;
+		}
+
+		a:active {
+			position: relative;
+			top: 1px;
 		}
 
 	</style>	
@@ -54,7 +59,7 @@
 
 	<aside>
 
-	<a href="#" title="Carl Title">Here is a link with Carl Title</a>
+		<a href="#" title="Carl Title">Here is a link with Carl Title</a>
 
 		<p>Declarations have properties and values. In the example above font-size and color are considered properties whilst 16px and blue are the respective values.</p>
 
@@ -63,7 +68,12 @@
 		<h3>Adjacent Heading</h3>
 
 		<div>
+
+			<p>Blah</p>
+
 			<p>Declarations have properties and values. In the example above font-size and color are considered properties whilst 16px and blue are the respective values.</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, earum, inventore iusto illum sapiente esse laboriosam commodi repudiandae obcaecati quia ducimus assumenda nam. Ipsam accusantium voluptatem quas corporis, beatae iure perspiciatis dolore aut eveniet illo, dicta provident quidem animi voluptas!</p>
 		</div>
 
 		<h3>Last Heading</h3>
