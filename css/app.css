@@ -60,6 +60,11 @@ a {
   -o-transition: .3s;
   transition: .3s; }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
 body {
   padding: 1rem;
   font-family: 'Cantarell', sans-serif; }

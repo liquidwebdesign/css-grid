@@ -57,6 +57,11 @@ a {
   -moz-transition: .3s;
   transition: .3s; }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
 .grid-wrapper {
   max-width: 1200px;
   height: 100vh;
