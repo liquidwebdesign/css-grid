@@ -69,12 +69,27 @@ body {
   padding: 1rem;
   font-family: 'Cantarell', sans-serif; }
 
-ul {
-  margin-bottom: 8px; }
-
 .index__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); }
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr auto 1fr;
+  grid-gap: .5em; }
+
+.index__header {
+  grid-column: 1 / 13;
+  grid-row: 1; }
+
+.index__basic {
+  grid-column: 1 / 6;
+  grid-row: 2; }
+
+.index__advanced {
+  grid-column: 6 / 13;
+  grid-row: 2; }
+
+.index__footer {
+  grid-column: 1 / 13;
+  grid-row: 3; }
 
 h1 {
   font-family: 'Fjalla One', sans-serif;
@@ -98,5 +113,8 @@ p {
   font-size: 17px;
   line-height: 23px;
   margin: 0 0 23px 0; }
+
+ul {
+  margin-bottom: 8px; }
 
 /*# sourceMappingURL=app.css.map */
