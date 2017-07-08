@@ -10,12 +10,12 @@ body {
 .index__grid {				
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: 1fr auto 1fr;
+	// grid-template-rows: 1fr auto 1fr;
 	grid-gap: .5em;	
 }
 
 .index__header {
-	grid-column: 1 / 13;
+	grid-column: 1 / -1;
 	grid-row: 1;
 }
 
@@ -30,7 +30,7 @@ body {
 }
 
 .index__footer {
-	grid-column: 1 / 13;
+	grid-column: 1 / -1;
 	grid-row: 3;
 }
 

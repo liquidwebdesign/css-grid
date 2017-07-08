@@ -1,8 +1,16 @@
 {
 	"folders":
 	[
-		{
-			"path": "."
-		}
+	{
+		"path": ".",
+		"folder_exclude_patterns": [
+		".git",
+		"css",
+		"images",
+		"assets",		
+		"html"				
+		],
+		"file_exclude_patterns": ["*.map","*.sublime-workspace"],
+	}
 	]
 }
