@@ -299,10 +299,34 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 443.0,
-		"last_filter": "",
+		"height": 342.0,
+		"last_filter": "material",
 		"selected_items":
 		[
+			[
+				"material",
+				"Material Theme: Activate theme"
+			],
+			[
+				"codekit",
+				"Set Syntax: CodeKit"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"kit",
+				"Set Syntax: CodeKit"
+			],
+			[
+				"install pac",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Colorsublime: Install Theme"
+			],
 			[
 				"remove",
 				"Package Control: Remove Package"
@@ -310,10 +334,6 @@
 			[
 				"list",
 				"Package Control: List Packages"
-			],
-			[
-				"html",
-				"Set Syntax: HTML"
 			],
 			[
 				"scss",
@@ -332,10 +352,6 @@
 				"Set Syntax: LESS"
 			],
 			[
-				"material",
-				"Material Theme: Activate theme"
-			],
-			[
 				"matera",
 				"Material Theme: Configuration"
 			],
@@ -346,10 +362,6 @@
 			[
 				"remove ",
 				"Package Control: Remove Package"
-			],
-			[
-				"install",
-				"Colorsublime: Install Theme"
 			],
 			[
 				"colo",
@@ -660,10 +672,6 @@
 				"Gist: Open Gist"
 			],
 			[
-				"install pac",
-				"Package Control: Install Package"
-			],
-			[
 				"disb",
 				"Package Control: Disable Package"
 			],
@@ -780,7 +788,7 @@
 				"Set Syntax: JavaScript"
 			]
 		],
-		"width": 615.0
+		"width": 703.0
 	},
 	"console":
 	{
@@ -805,7 +813,18 @@
 	],
 	"file_history":
 	[
+		"/Y/Archive/dev/grid/kit/index.kit",
+		"/Y/Archive/dev/grid/scss/base/_type.scss",
+		"/Y/Archive/dev/grid/scss/advanced/river-island.scss",
+		"/Y/Archive/dev/grid/scss/base/_media-queries.scss",
 		"/Y/Archive/dev/grid/grid.sublime-project",
+		"/Y/Archive/dev/grid/scss/app.scss",
+		"/Y/Archive/dev/grid/kit/includes/_global-footer.kit",
+		"/Y/Archive/dev/grid/kit/complex/river-island.html",
+		"/Y/Archive/dev/grid/kit/templates/river-island.kit",
+		"/Y/Archive/dev/grid/scss/complex/river-island.scss",
+		"/Y/Archive/dev/grid/kit/river-island.kit",
+		"/Y/Archive/dev/grid/kit/includes/_global-header.kit",
 		"/Y/Archive/dev/grid/grid.sublime-workspace",
 		"/Y/Archive/dev/web-devel/web-devel.sublime-project",
 		"/Y/Archive/dev/web-devel/scss/complex/river-island.scss",
@@ -921,22 +940,11 @@
 		"/Y/Archive/dev/board/scss/material/_elevation.scss",
 		"/Y/Archive/dev/board/js/components/dropdown.js",
 		"/Y/Archive/dev/board/scss/components/_radio-button.scss",
-		"/Y/Archive/Downloads/materialize-src-v0.98.2/materialize-src/js/dropdown.js",
-		"/Y/Archive/Downloads/materialize-src-v0.98.2/materialize-src/sass/components/_dropdown.scss",
-		"/Y/Archive/Downloads/materialize-src-v0.98.2/materialize-src/js/buttons.js",
-		"/Y/Archive/dev/board/sandbox/includes/components/menus/dropdown-menu.html",
-		"/Y/Archive/dev/board/sandbox/build/components/menus.html",
-		"/Y/Archive/dev/board/board.sublime-project",
-		"/Y/Archive/dev/board/sandbox/components/menus.html",
-		"/Y/Archive/Downloads/convert.less",
-		"/Y/Archive/dev/board/scss/components/_lists.scss",
-		"/Y/Archive/dev/board/scss/components/_base.scss",
-		"/Y/Archive/dev/board/scss/components/_buttons-fab.scss",
-		"/Y/Archive/Work/Web Projects/Liquid Web/Modelling/1st email.txt"
+		"/Y/Archive/Downloads/materialize-src-v0.98.2/materialize-src/js/dropdown.js"
 	],
 	"find":
 	{
-		"height": 36.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -960,6 +968,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"complex/",
+			"basic",
+			"complex",
+			"pages",
 			"web-devel",
 			"1 300px",
 			"2 300px",
@@ -1083,11 +1095,7 @@
 			"list",
 			">\n",
 			"div",
-			"child",
-			"content",
-			"div",
-			"strike",
-			"lists"
+			"child"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1158,7 +1166,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 36.0
+		"height": 38.0
 	},
 	"input":
 	{
@@ -1195,7 +1203,7 @@
 	"project": "grid.sublime-project",
 	"replace":
 	{
-		"height": 68.0
+		"height": 71.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1205,16 +1213,52 @@
 		"selected_items":
 		[
 			[
+				"ty",
+				"scss\\base\\_type.scss"
+			],
+			[
+				"index",
+				"kit\\index.kit"
+			],
+			[
+				"media",
+				"scss\\base\\_media-queries.scss"
+			],
+			[
 				"river",
-				"pages\\complex\\river-island.html"
+				"scss\\advanced\\river-island.scss"
+			],
+			[
+				"loba-",
+				"kit\\includes\\_global-footer.kit"
+			],
+			[
+				"river-island.scss",
+				"scss\\complex\\river-island.scss"
+			],
+			[
+				"app",
+				"scss\\app.scss"
+			],
+			[
+				"river-",
+				"kit\\river-island.kit"
+			],
+			[
+				"global-header",
+				"kit\\includes\\_global-header.kit"
+			],
+			[
+				"river-island",
+				"kit\\templates\\river-island.kit"
+			],
+			[
+				"riverisland",
+				"kit\\complex\\river-island.html"
 			],
 			[
 				"media-",
 				"scss\\base\\_media-queries.scss"
-			],
-			[
-				"river-island",
-				"scss\\complex\\river-island.scss"
 			],
 			[
 				"reset",
@@ -1227,14 +1271,6 @@
 			[
 				"templ",
 				"template.html"
-			],
-			[
-				"app",
-				"scss\\app.scss"
-			],
-			[
-				"index",
-				"index.html"
 			],
 			[
 				"remote-file",
@@ -1427,10 +1463,6 @@
 			[
 				"buttons",
 				"sandbox\\templates\\components\\buttons.html"
-			],
-			[
-				"ty",
-				"scss\\style\\_typography.scss"
 			],
 			[
 				"navdrawer",
@@ -1661,10 +1693,6 @@
 				"scss\\utils\\_functions.scss"
 			],
 			[
-				"media",
-				"scss\\components\\_media-object.scss"
-			],
-			[
 				"utils",
 				"scss\\utils\\_functions.scss"
 			],
@@ -1695,26 +1723,6 @@
 			[
 				"search-box",
 				"scss\\patterns\\_search-box.scss"
-			],
-			[
-				"nav-drawer",
-				"scss\\patterns\\_nav-drawer.scss"
-			],
-			[
-				"toasts",
-				"scss\\components\\_toast.scss"
-			],
-			[
-				"grid-lists",
-				"scss\\components\\_grid-lists.scss"
-			],
-			[
-				"artic",
-				"scss\\patterns\\_article.scss"
-			],
-			[
-				"swtich",
-				"scss\\components\\_switch.scss"
 			]
 		],
 		"width": 0.0
