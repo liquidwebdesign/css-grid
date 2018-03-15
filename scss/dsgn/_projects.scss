@@ -1,0 +1,141 @@
+.projects {
+	
+	display: flex;
+	flex-direction: column;
+	
+	@include breakpoint($large) {				
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+}
+
+.projects__container {		
+
+	flex: 1;
+	
+	display: flex;
+	flex-direction: column;	
+	
+	padding-bottom: 2rem;
+	
+	@include breakpoint($large) {				
+		flex-direction: row;
+		min-width: 300px;
+		min-height: 300px;			
+	}
+
+	@include breakpoint($xlarge) {						
+		min-width: 400px;		
+		min-height: 400px;
+	}
+	
+}
+
+.projects__menu {	
+
+	display: flex;
+	flex-direction: column;
+
+	background: $yellow;	
+	
+	@include breakpoint($large) {				
+		align-items: center;
+		justify-content: center;
+	}
+	
+}
+
+.projects__menu__heading {	
+
+	padding-left: 1rem;
+	padding-top: 1rem;
+	color: white;	
+}
+
+.projects__menu__text {	
+	
+	padding-left: 1rem;
+	font-family: $condensed;
+	font-size: 16px;
+	color: white;
+}
+
+.projects__text {			
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	
+	margin: 1rem;
+	
+	@include breakpoint($large) {				
+		flex-direction: column;
+	}
+
+	@include breakpoint($xlarge) {						
+		justify-content: center;
+	}
+	
+}
+
+.projects__view {	
+	
+	display: flex;
+	flex-direction: row;	
+	align-items: center;
+	margin-top: 1rem;	
+	margin-bottom: 1rem;
+	
+}
+
+.projects__like {	
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;				
+	justify-content: center;	
+
+}
+
+.projects__like__text {
+	color: red;
+}
+
+.projects__image {	
+	
+	display: flex;
+	flex-direction: column;
+	
+	margin: 1rem;
+	
+	@include breakpoint($large) {		
+		max-width: 250px;		
+		align-items: center;
+		justify-content: center;
+	}
+	
+}
+
+// Individual Projects
+
+.projects-fondue {	
+	background: white;	
+}
+
+.projects-potter {
+	background: $light-brown;
+}
+
+.projects-tabano {
+	background: $tobano;
+}
+
+.projects-louisxx {
+	color: white;
+	background: $darkgrey;
+}
+
+.projects-p22 {	
+	background: $lightgrey;
+}

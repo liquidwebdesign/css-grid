@@ -1,0 +1,50 @@
+body {
+	max-width: 1500px;
+	margin: 0 auto;
+}
+
+h1 {
+	font-family: $condensed;
+	font-weight: 300;
+	font-size: 48px;
+	text-transform: uppercase;
+	padding-bottom: 1rem;
+}
+
+h2 {
+	font-family: $condensed;
+	font-weight: 300;
+	font-size: 26px;
+	text-transform: uppercase;
+	padding-bottom: 1rem;
+}
+
+h3 {
+	font-family: $condensed;
+	font-weight: 300;
+	font-size: 20px;
+	text-transform: uppercase;
+	padding-bottom: 1rem;
+}
+
+h4 {
+	font-family: $condensed;
+	font-weight: 400;
+	font-size: 14px;
+	text-transform: uppercase;	
+	padding-bottom: 1rem;
+}
+
+p {
+	font-family: $condensed;
+	font-weight: 300;
+	font-size: 14px;
+	padding-bottom: 1rem;
+}
+
+li {
+	font-family: $condensed;
+	font-weight: 300;
+	font-size: 13px;
+	text-transform: uppercase;
+}

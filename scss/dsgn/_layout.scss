@@ -1,0 +1,20 @@
+.switch-ui {	
+	
+	// outline: 1px dotted black;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	
+	@include breakpoint($small) {				
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+}
+
+.switch-ui--designers {
+	display: flex;
+	flex-direction: column;
+}

@@ -1,0 +1,7 @@
+@function convertRem($pixels) {
+    @return ($pixels/16)+rem;
+}
+
+@function pxtopercent($target, $parent: 16) {
+  @return percentage($target / $parent);
+}

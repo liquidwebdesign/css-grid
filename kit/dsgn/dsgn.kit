@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+	<meta charset="utf-8">
+	<title>Associates Studio Design</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300|Roboto' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="../../css/dsgn/dsgn.css">	
+
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+	<script>
+		function initialize() {
+			var mapCanvas = document.getElementById('footer__map');
+			var mapOptions = {
+				center: new google.maps.LatLng(33.7662609, -118.1918161),
+				zoom: 17,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			}
+			var map = new google.maps.Map(mapCanvas, mapOptions)
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+
+</head>
+
+<body>
+
+	<!-- @import "../includes/dsgn/header.kit" -->
+
+	<!-- @import "../includes/dsgn/projects.kit" -->
+
+	<!-- @import "../includes/dsgn/studio.kit" -->
+
+	<!-- @import "../includes/dsgn/designers.kit" -->	
+
+	<!-- @import "../includes/dsgn/studio.kit" -->
+
+	<!-- @import "../includes/dsgn/news.kit" -->
+
+	<!-- @import "../includes/dsgn/footer.kit" -->
+
+	<script src="../../js/jquery/dist/jquery.min.js"></script>
+
+</body>
+
+</html>

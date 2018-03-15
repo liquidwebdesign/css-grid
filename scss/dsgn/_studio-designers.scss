@@ -1,0 +1,108 @@
+.studio-designers {
+
+	// outline: 1px dotted black;	
+	
+	display: flex;
+	flex-direction: column;
+	
+	background: $brown;
+	
+	@include breakpoint($large) {		
+		flex-direction: row;
+	}
+
+}
+
+.studio-designers__intro {	
+
+	outline: 1px dotted black;
+
+	flex: 1;
+	
+	padding: 1rem;
+
+	@include breakpoint($large) {		
+		padding: convertRem(50);
+		min-width: 500px;
+	}
+	
+}
+
+.studio-designers__list {
+
+	outline: 1px dotted black;	
+
+	padding: 1rem;
+	
+	display: flex;		
+	flex-direction: column;
+
+	@include breakpoint($xlarge) {		
+
+		max-width: 1000px;
+		
+		flex-direction: row;	
+		padding-top: convertRem(80);		
+		padding-right: convertRem(155);
+	}
+
+}
+
+.staff-member {
+
+	// outline: 1px dotted black;
+
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	
+	padding-bottom: 1rem;
+	
+}
+
+.staff-member__image {		
+		
+	@include breakpoint($small) {		
+		padding-right: convertRem(30);
+	}
+
+	@include breakpoint($large) {
+		max-width: 270px;		
+	}
+
+}
+
+.staff-member__description {	
+
+	outline: 1px dotted black;
+		
+	font-family: $condensed;
+	font-weight: 400;
+	font-size: 14px;
+	text-transform: uppercase;	
+}
+
+.cv-ui {	
+
+	outline: 1px dotted black;
+
+	display: flex;
+	flex-direction: row;
+	
+}
+
+.staff-member__cv {
+
+	outline: 1px dotted black;
+	
+	font-family: $condensed;
+	font-weight: 400;
+	text-transform: uppercase;	
+	font-size: 16px;
+	color: orange;
+	
+	@include breakpoint($small) {		
+		flex: 1 1 50px;	
+	}
+
+}

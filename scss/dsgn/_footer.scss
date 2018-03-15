@@ -1,0 +1,114 @@
+footer {
+
+	display: flex;
+	flex-direction: column;
+	
+	@include breakpoint($small) {
+		flex-direction: row;		
+	}
+
+}
+
+#footer__map {
+
+	order: 2;
+
+	flex: 1 1 50%;
+	
+	@include breakpoint($small) {
+		order: 1;
+	}
+
+}
+
+.footer__info {
+
+	order: 1;
+
+	flex: 1 1 50%;
+	
+	display: flex;
+	flex-direction: column;	
+	
+	padding: 2rem;
+	
+	background: $brown;
+	
+	@include breakpoint($small) {
+		order: 2;		
+	}
+	
+	@include breakpoint($xlarge) {		
+		padding-left: convertRem(100);
+		padding-top: convertRem(80);
+		padding-right: convertRem(155);
+	}
+
+}
+
+.footer__address {
+
+	flex: 1;	
+	
+	display: flex;
+	flex-direction: column;	
+
+	@include breakpoint($large) {		
+		flex-direction: row;			
+		justify-content: flex-end;
+	}
+
+	p {
+		font-family: $condensed;
+		font-weight: 400;
+		font-size: 15px;
+		padding-bottom: 1rem;
+	}
+
+}
+
+.footer__address__details {
+
+	@include breakpoint($small) {		
+		width: 50%;
+	}
+
+}
+
+.footer__address_logo {
+
+	outline: 1px dotted black;
+
+	@include breakpoint($small) {		
+		width: 50%;
+	}
+
+}
+
+.footer__logo__image {
+
+}
+
+.footer__logo__tagline {
+
+}
+
+.footer__credits {
+	
+	display: flex;
+
+	flex: 1;
+	width: 100%;
+	
+	padding-top: 2rem;	
+	
+	font-family: $condensed;
+	font-weight: 400;
+	font-size: 14px;
+	
+	@include breakpoint($large) {		
+		padding-bottom: 2rem;	
+		justify-content: flex-end;
+	}
+	
+}

@@ -1,0 +1,47 @@
+.social-media {	
+
+	// outline: 1px dotted black;
+
+	flex: 2;
+	
+	padding-right: 1rem;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;	
+
+}
+
+.social-media--designers {
+	
+	// outline: 1px dotted black;
+
+}
+
+.social-media__icons {
+	
+	color: $aqua;
+	
+	@include breakpoint($small) {				
+		padding-right: 1rem;
+	}
+
+	@include breakpoint($large) {				
+		padding-right: 1rem;
+	}
+
+	@include breakpoint($xlarge) {				
+		padding-right: 1rem;
+	}
+
+}
+
+.social-media__icons--orange {
+	color: $orange;
+}
+
+.social-media__icons:hover {
+	opacity: 0.5;
+}

@@ -1,0 +1,147 @@
+.studio {
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;		
+
+	@include breakpoint($small) {		
+		flex-direction: row;
+	}
+
+}
+
+.studio-menu {
+
+	flex: 1;
+
+	display: flex;
+	flex-direction: row;
+
+	padding: 2rem;
+	
+	background: $pink;	
+	color: white;
+	
+	@include breakpoint($large) {		
+		// max-width: 500px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+}
+
+.studio-intro {
+
+	flex: 2;
+
+	padding: 2rem;
+
+	display: flex;
+	flex-direction: column;
+	
+	align-items: center;
+	justify-content: center;
+	
+	background: $brown;	
+	
+@include breakpoint($large) {		
+		// flex-direction: row;		
+		// padding-top: convertRem(80);
+		padding-right: convertRem(155);		
+	}
+	
+	@include breakpoint($xlarge) {		
+		flex-direction: row;
+		max-width: 1000px;
+		padding-left: convertRem(100);
+		padding-top: convertRem(80);
+		padding-right: convertRem(155);
+		padding-bottom: 4rem;
+	}
+
+}
+
+.studio-intro__text {	
+	
+	flex: 1;
+	
+	p.italic {		
+		font-family: $condensed;
+		font-weight: 400;
+		font-style: italic;
+		font-size: 16px;
+		padding-bottom: 1.5rem;
+	}
+
+	p.normal {		
+		font-family: $condensed;
+		font-weight: 400;		
+		font-size: 16px;
+		padding-bottom: 1.5rem;
+	}
+
+	@include breakpoint($xlarge) {			
+
+		padding-right: convertRem(25);
+		
+		p.italic {		
+			font-size: 18px;
+		}
+		
+		p.normal {			
+			font-size: 18px;
+		}
+		
+	}
+
+}
+
+.studio-intro__awards {	
+
+	flex: 1;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;	
+	
+	h2 {		
+		font-family: $condensed;
+		font-weight: 400;		
+		font-size: 14px;		
+		border-bottom: 1px solid $darkgrey;
+		padding-top: 2rem;
+	}
+	
+}
+
+.studio-intro__awards__text {	
+	
+}
+
+.studio-intro__awards__image {
+
+}
+
+.studio-intro__awards__list {
+	
+	flex: 1;
+	
+	display: flex;
+	flex-direction: column;	
+	
+	@include breakpoint($small) {		
+		flex-direction: row;		
+	}
+	
+	@include breakpoint($xlarge) {		
+
+		padding-bottom: 2rem;		
+	}
+
+	ul {
+		padding: 1rem;
+	}
+
+}
+

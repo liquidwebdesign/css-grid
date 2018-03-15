@@ -1,0 +1,100 @@
+.header {	
+
+	display: flex;
+	flex-direction: column;
+	
+	background: $brown;
+	
+	@include breakpoint($small) {		
+		flex-direction: row;
+	}
+
+}
+
+.header__hero {	
+
+	flex: 1 1 50%;	
+
+	background: $brown;	
+
+	@include breakpoint($large) {				
+		background: url("../../images/dsgn/header__image-1.jpg") center right no-repeat;
+		background-size: 50% 50%;		
+	}
+
+	@include breakpoint($xlarge) {						
+		background-size: 65% 65%;		
+	}
+
+}
+
+.header__branding {	
+
+	display: flex;
+	flex-direction: column;	
+	
+	margin-left: 1rem;
+	margin-top: 1rem;
+
+}
+
+.header__logo {	
+	
+}
+
+.header__tagline {
+
+	flex: 2;
+	
+	padding-bottom: 1rem;	
+	
+	font-family: $condensed;
+	font-size: 18px;
+	color: black;
+	text-transform: uppercase;
+	
+}
+
+.header__menu {
+
+	flex: 1 1 50%;
+
+	padding-top: 1rem;
+	
+	display: flex;	
+	flex-direction: row;
+	justify-content: space-around;
+
+	background-color: $aqua;			
+	
+	@include breakpoint($small) {		
+		padding-top: 2rem;
+		flex-direction: column;		
+		align-items: center;
+	}
+
+}
+
+.header__menu__button {		
+
+	width: 90px;
+	height: 90px;
+	
+	padding: 25px;	
+	border: 2px solid white;
+	
+}
+
+.header__menu__address {
+	
+}
+
+.header__menu__address__text {
+
+	font-family: $condensed;
+	font-size: 12px;
+	font-weight: 400;
+	color: white;
+	text-transform: uppercase;
+	
+}
