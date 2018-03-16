@@ -4,8 +4,8 @@ body {
     background: #A4A475;
 
     display: grid;
-    grid-template-columns: repeat(12, auto);
-    grid-template-rows: 130px 700px 100px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 150px auto auto;
 }
 
 .topofpage {
