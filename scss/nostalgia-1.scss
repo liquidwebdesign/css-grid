@@ -1,0 +1,125 @@
+A:link {
+text-decoration: none;
+}
+
+A:active {
+text-decoration: none;
+}
+
+A:visited {
+text-decoration: none;
+}
+
+.sansa {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.sansb, .sansa small b, .sansa b small, small.sansa b, small b.sansa {
+font-family: "Myriad Web", Verdana, Helvetica, Arial, sans-serif;
+}
+
+.serifa {
+font-family: "Minion Web", Georgia, Palatino, "Times New Roman", serif;
+}
+
+small.sansa,.sansa small {
+font-family: Helvetica, sans-serif;
+}
+
+big.sansb,.sansb big {
+font-family: "Myriad Web", Tahoma, Verdana, Helvetica, Arial, sans-serif;
+}
+
+.min {
+font-family: "Myriad Web", Verdana, Helvetica, Arial, sans-serif;
+font-size: 12px;
+}
+
+H1, H2, H3, H4, H5, H6 {
+color: blue;
+background: none;
+font-family: Verdana, Arial, helvetica, sans-serif;
+}
+
+P {
+color: black;
+background: none;
+font-family: "Minion Web", Georgia, Palatino, "Times New Roman", serif;
+}
+
+body {
+margin: 10px 10px 0px 10px;
+padding: 0px;
+background: #A4A475;
+}
+
+#leftcontent {
+position: absolute;
+left: 10px;
+top: 68px;
+width: 200px;
+height: 100%;
+background: #fff;
+border: 0px solid #000;
+}
+
+#centercontent {
+background: #fff;
+margin-left: 199px;
+margin-right: 199px;
+border: 0px solid #000;
+/*
+IE5x PC mis-implements the box model. Because of that we sometimes have
+to perform a little CSS trickery to get pixel-perfect display across browsers.
+The following bit of code was proposed by Tantek Celik, and it preys upon a CSS
+parsing bug in IE5x PC that will prematurly close a style rule when it runs
+into the string "\"}\"". After that string appears in a rule, then, we can override
+previously set attribute values and only browsers without the parse bug will
+recognize the new values. So any of the name-value pairs above this comment
+that we need to override for browsers with correct box-model implementations
+will be listed below.
+
+We use the voice-family property because it is likely to be used very infrequently,
+and where it is used it will be set on the body tag. So the second voice-family value
+of "inherit" will override our bogus "\"}\"" value and allow the proper value to
+cascade down from the body tag.
+
+The style rule immediately following this rule offers another chance for CSS2
+aware browsers to pick up the values meant for correct box-model implementations.
+It uses a CSS2 selector that will be ignored by IE5x PC.
+
+Read more at http://www.glish.com/css/hacks.asp
+*/
+
+voice-family: "\"}\"";
+voice-family: inherit;
+margin-left: 201px;
+margin-right:201px;
+}
+html>body #centercontent {
+margin-left: 201px;
+margin-right:201px;
+}
+
+#rightcontent {
+position: absolute;
+right: 10px;
+top: 68px;
+width: 200px;
+background: #fff;
+border: 0px solid #000;
+}
+
+#banner {
+background:#fff;
+height: 54px;
+border-top: 0px solid #000;
+border-right: 0px solid #000;
+border-left: 0px solid #000;
+voice-family: "\"}\"";
+voice-family: inherit;
+height:53px;
+}
+html>body #banner {
+height:53px;
+}
