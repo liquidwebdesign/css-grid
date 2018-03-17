@@ -24,9 +24,9 @@ header {
     padding: 1rem;
 }
 
-.header__logo {    
+.header__logo {
     max-width: 100%;
-    display:block;
+    display: block;
     height: auto;
 }
 
@@ -69,11 +69,11 @@ footer {
 }
 
 .footer__topofpage {
-   grid-column: 3 / 11;
-   grid-row: 1 / 2;
+    grid-column: 3 / 11;
+    grid-row: 1 / 2;
 }
 
-.footer__lastupdated__text {
+.footer__lastupdated {
     grid-column: 11 / 13;
     grid-row: 1 / 2;
 }
@@ -90,50 +90,19 @@ a {
     }
 }
 
-H1,
-H2,
-H3,
-H4,
-H5,
-H6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: blue;
     background: none;
     font-family: Verdana, Arial, helvetica, sans-serif;
 }
 
-P {
+p {
     color: black;
     background: none;
     font-family: "Minion Web", Georgia, Palatino, "Times New Roman", serif;
-}
-
-.sansa {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.sansb,
-.sansa small b,
-.sansa b small,
-small.sansa b,
-small b.sansa {
-    font-family: "Myriad Web", Verdana, Helvetica, Arial, sans-serif;
-}
-
-.serifa {
-    font-family: "Minion Web", Georgia, Palatino, "Times New Roman", serif;
-}
-
-small.sansa,
-.sansa small {
-    font-family: Helvetica, sans-serif;
-}
-
-big.sansb,
-.sansb big {
-    font-family: "Myriad Web", Tahoma, Verdana, Helvetica, Arial, sans-serif;
-}
-
-.min {
-    font-family: "Myriad Web", Verdana, Helvetica, Arial, sans-serif;
-    font-size: 12px;
 }
