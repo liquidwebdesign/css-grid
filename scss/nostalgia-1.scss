@@ -60,7 +60,7 @@ article {
     background: white;
     @include padding(null 1rem 1rem 1rem);
     @include media(">tablet") {
-        @include padding(null null 1rem null);
+        // @include padding(null null 1rem null);
         grid-column: 3 / 11;
         grid-row: 2 / 3;
     }
@@ -73,7 +73,7 @@ aside {
     @include media(">tablet") {
         @include padding(null 1rem 1rem 1rem);
         grid-column: 11 / 13;
-        grid-row: 2 / 3;
+        grid-row: 2 / 3; 
     }
 }
 
@@ -100,7 +100,7 @@ footer {
     @include media(">tablet") {
         grid-column: 1 / 3;
         grid-row: 1 / 2;
-        @include padding(null null 1rem 1rem);
+        // @include padding(null null 1rem 1rem);
     }
 }
 
@@ -108,7 +108,7 @@ footer {
     grid-column: 3 / 11;
     grid-row: 1 / 2;
     @include media(">tablet") {
-        @include padding(null null 1rem 1rem);
+        // @include padding(null null 1rem 1rem);
     }
 }
 
@@ -120,7 +120,7 @@ footer {
     grid-column: 11 / 13;
     grid-row: 1 / 2;
     @include media(">tablet") {
-        @include padding(null null 1rem 1rem);
+        // @include padding(null null 1rem 1rem);
     }
 }
 
