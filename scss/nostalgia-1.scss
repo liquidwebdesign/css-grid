@@ -35,8 +35,7 @@ header {
 }
 
 .header__image {
-    display: none;
-    justify-self: end;
+    display: none;    
     @include media(">tablet") {
         display: block;
     }
