@@ -16,3 +16,31 @@
 @import "news";
 @import "footer";
 
+@mixin bp($point) {
+    @if $point==xlarge {
+        @media (min-width: 1800px) {
+            @content;
+        }
+    }
+    @if $point==large {
+        @media (min-width: 1295px) {
+            @content;
+        }
+    }
+    @else if $point==medium {
+        @media (min-width: 600px) {
+            @content;
+        }
+    }
+    @else if $point==small {
+        @media (min-width: 500px) {
+            @content;
+        }
+    }
+}
+
+// Typography
+$sans-serif-typeface: 'Roboto',
+sans-serif;
+$serif-typeface: 'Georgia',
+serif;
