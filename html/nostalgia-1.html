@@ -14,10 +14,10 @@
 
     <header>
         <a class="topofpage" name="top"></a>
-        <a href="http://www.liquidweb.com.au/" title="Visit the Liquid Web home page" onmouseover="window.status='Visit the Liquid Web home page'; return true;">
-            <img class="header__logo" src="../images/nostalgia-1/logo.gif" alt="" border="0" width="357" height="54" />
+        <a href="http://www.liquidweb.com.au/" title="Visit the Liquid Web home page">
+            <img class="header__logo" src="../images/nostalgia-1/logo.gif" alt="Liquid Web" width="357" height="54" />
         </a>
-        <img class="header__image" src="../images/nostalgia-1/animation1.gif" alt="Liquid Web">
+        <img class="header__image" id="randomImage" src="../images/nostalgia-1/animation1.gif" alt="Liquid Web">
     </header>
 
     <nav>
@@ -58,19 +58,30 @@
 
     <footer>
 
-        <p class="footer__copyright">&copy; 1997 - 2001 Liquid Web</p>
+        <div class="footer__copyright">&copy; 1997 - 2001 Liquid Web</div>
 
         <div class="footer__topofpage">
 
-            <img class="footer__topofpage__image" src="../images/nostalgia-1/topofpage.gif" alt="" border="0" width="17" height="21"
-                align="middle" />
-            <a class="footer__topofpage__text" href="#top" title="Top of the page" onmouseover="window.status='Top of page'; return true;">Top of page</a>
+            <img class="footer__topofpage__img" src="../images/nostalgia-1/topofpage.gif" alt="" border="0" width="17" height="21" />
+            <a class="footer__topofpage__txt" href="#top" title="Top of the page">Top of page</a>
 
         </div>
 
-        <p class="footer__lastupdated">Last updated: 2018</p>
+        <div class="footer__lastupdated">Last updated: 2018</div>
 
     </footer>
+
+    <script>
+        var description = [
+            "../images/nostalgia-1/animation1.gif",
+            "../images/nostalgia-1/animation2.gif",
+            "../images/nostalgia-1/animation3.gif"
+        ];
+
+        var size = description.length
+        var x = Math.floor(size * Math.random())
+        document.getElementById('randomImage').src = description[x];
+    </script>
 
 </body>
 
