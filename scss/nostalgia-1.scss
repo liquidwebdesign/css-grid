@@ -70,8 +70,8 @@ aside {
     grid-column: 1 / 1;
     grid-row: 4 / 5;
     background: white;
-    @include padding(null 1rem 1rem 1rem);
     @include media(">tablet") {
+        @include padding(null 1rem 1rem 1rem);
         grid-column: 11 / 13;
         grid-row: 2 / 3;
     }
@@ -85,6 +85,7 @@ footer {
     background: white;
     font-family: $verdana;
     font-size: modular-scale(-1);
+    @include padding(null 1rem 1rem 1rem);
     @include media(">tablet") {
         grid-column: 1 / 13;
         grid-row: 3 / 4;
