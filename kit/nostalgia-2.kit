@@ -1,19 +1,16 @@
-<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en"
-"http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-
-    <title>
-        <?php include("./modules/pagetitle.php3")?>
-    </title>        
-
-    <link rel="stylesheet" type="text/css" href="./css/stylesheet.css" media="screen" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Liquid Web</title>
+    <link rel="stylesheet" type="text/css" href="../css/nostalgia-2.css" />
 
 </head>
 
-<body background="white" topmargin="0" leftmargin="0" marginheight="0" marginwidth="0">
+<body>
 
     <a id="top" name="top"></a>
 
@@ -21,17 +18,17 @@
 
         <tr valign="top">
 
-            <td width="155" background="./images/widestrip.gif">
+            <td width="155" background="../images/nostalgia-2/widestrip.gif">
                 <a href="./" onmouseover="window.status='Return to the home page'; return true;">
-                    <img name="template_1" src="images/template_1.gif" width="155" height="102" border="0" alt="" />
+                    <img name="template_1" src="../images/nostalgia-2/template_1.gif" width="155" height="102" border="0" alt="" />
                 </a>
                 <br />
-                <img name="template_5" src="images/template_5.gif" width="155" height="121" border="0" usemap="#navmap" alt=""
+                <img name="template_5" src="../images/nostalgia-2/template_5.gif" width="155" height="121" border="0" usemap="#navmap" alt=""
                 />
             </td>
 
-            <td width="15" background="./images/greenstrip.gif">
-                <img src="./images/dot.gif" border="0" width="15" height="1" alt="" />
+            <td width="15" background="../images/nostalgia-2/greenstrip.gif">
+                <img src="../images/nostalgia-2/dot.gif" border="0" width="15" height="1" alt="" />
             </td>
 
             <td width="100%">
@@ -93,20 +90,30 @@
                         <tr valign="top">
                             <td align="left">
                                 <br />
-                                <?php include("./modules/topofpagenav.php3")?>
+                                <a href="#" onMouseover="window.status='Top of page'; return true;">
+                                    <img src="../images/nostalgia-2/topofpage.gif" width="15" height="16" border="0" valign="bottom" alt="" />&nbsp;Top of page</a>
+
                             </td>
                         </tr>
 
                         <tr valign="top">
                             <td align="left">
                                 <br />
-                                <?php include("./modules/textlinks.php3")?>
+                                <a href="./" onMouseover="window.status='Return to the home page'; return true;">Home</a> |
+                                <a href="aboutus.php3" onMouseover="window.status='About Us'; return true;">About Us</a> |
+                                <a href="portfolio.php3" onMouseover="window.status='Our Portfolio'; return true;">Our Portfolio</a> |
+                                <br />
+                                <a href="services.php3" onMouseover="window.status='Our Services'; return true;">Our services</a> |
+                                <a href="contactus.php3" onMouseover="window.status='Contact Us'; return true;">Contact Us</a> | &nbsp;
+                                <br />&nbsp;
+                                <br />
+
                             </td>
                         </tr>
 
                         <tr valign="top">
                             <td align="left">
-                                <?php include("./modules/copyright.php3")?>
+                                &copy; 1997-2002 Liquid Web Pty Ltd
                             </td>
                         </tr>
 
@@ -116,8 +123,8 @@
 
             </td>
 
-            <td width="15" background="./images/greenstrip.gif">
-                <img src="./images/dot.gif" border="0" width="15" height="1" alt="" />
+            <td width="15" background="../images/nostalgia-2/greenstrip.gif">
+                <img src="../images/nostalgia-2/dot.gif" border="0" width="15" height="1" alt="" />
             </td>
 
         </tr>
@@ -125,20 +132,29 @@
         <tr valign="top">
 
             <td width="155">
-                <img name="template_7" src="images/template_7.gif" width="155" height="93" border="0" alt="" />
+                <img name="template_7" src="../images/nostalgia-2/template_7.gif" width="155" height="93" border="0" alt="" />
             </td>
 
             <td width="15">&nbsp;</td>
 
             <td width="100%" colspan="2" align="right">
-                <img name="template_9" src="images/template_9.gif" width="85" height="93" border="0" alt="" />
+                <img name="template_9" src="../images/nostalgia-2/template_9.gif" width="85" height="93" border="0" alt="" />
             </td>
 
         </tr>
 
     </table>
 
-    <?php include("./modules/navmap.php3")?>
+    <map name="navmap">
+        <area shape="rect" coords="70,92,127,100" href="contactus.php3" alt="Contact Us" onmouseover="window.status='Contact Us'; return true;"
+        />
+        <area shape="rect" coords="70,77,137,85" href="services.php3" alt="Our Services" onmouseover="window.status='Our Services'; return true;"
+        />
+        <area shape="rect" coords="70,62,138,72" href="portfolio.php3" alt="Our Portfolio" onmouseover="window.status='Our Portfolio'; return true;"
+        />
+        <area shape="rect" coords="70,46,118,54" href="aboutus.php3" alt="About Us" onmouseover="window.status='About Us'; return true;"
+        />
+    </map>
 
 </body>
 

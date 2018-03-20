@@ -1,3 +1,11 @@
+@import "core/core";
+
+$breakpoints: (phone: 720px, tablet: 768px, medium: 992px, desktop: 1250px);
+
+body {
+    background: white;
+}
+
 A:link {
     background: none;
     color: #8F8E1C;
