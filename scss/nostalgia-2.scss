@@ -6,6 +6,39 @@ body {
     background: white;
 }
 
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    @include media(">tablet") {
+        grid-template-columns: [nav-start] 170px [nav-end section-start] 1fr [section-end aside-start] 15px [aside-end];
+        grid-template-rows: [first-row] auto [second-row-start] auto [second-row-end];
+    }
+    @include media(">desktop") {
+        margin: 10px auto 0px auto;
+        max-width: 1250px;
+    }
+}
+
+nav {
+    grid-column: nav-start / nav-end;
+    grid-row: first-row / second-row-start;
+}
+
+section {
+    grid-column: section-start / section-end;
+    grid-row: first-row / second-row-start;
+}
+
+aside {
+    background: green;
+}
+
+footer {
+    grid-column: nav-start / aside-end;
+    grid-row: second-row-start / second-row-end;
+}
+
 A:link {
     background: none;
     color: #8F8E1C;
