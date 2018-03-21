@@ -11,153 +11,76 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, auto);
     @include media(">tablet") {
-        grid-template-columns: [nav-start] 170px [nav-end section-start] 1fr [section-end aside-start] 15px [aside-end];
-        grid-template-rows: [first-row] auto [second-row-start] auto [second-row-end];
+        grid-template-columns: [nav-start] 185px [nav-end section-start] 1fr [section-end];
+        grid-template-rows: [first-row-start] auto [first-row-end second-row-start] auto [second-row-end];
     }
     @include media(">desktop") {
-        margin: 10px auto 0px auto;
+        margin: 0 auto 0 auto;
         max-width: 1250px;
     }
 }
 
-nav {
+nav {    
     grid-column: nav-start / nav-end;
-    grid-row: first-row / second-row-start;
+    grid-row: first-row-start / first-row-end;
+    margin-right: 15px;
+    background: url(../images/nostalgia-2/greenstrip.gif) repeat-y top right;
 }
 
 section {
     grid-column: section-start / section-end;
-    grid-row: first-row / second-row-start;
+    grid-row: first-row-start / first-row-end;
+    background: url(../images/nostalgia-2/greenstrip.gif) repeat-y top right;
+    margin-right: 15px;    
 }
 
-aside {
-    background: green;
+.section__image {
+    display: block;
+    margin: 0 auto;
+}
+
+.design__element {
+    grid-column: nav-start / nav-end;
+    grid-row: second-row-start / second-row-end;
+    background: url(../images/nostalgia-2/greenstrip.gif) repeat-y top right;
 }
 
 footer {
-    grid-column: nav-start / aside-end;
+    grid-column: section-start / section-end;
     grid-row: second-row-start / second-row-end;
 }
 
-A:link {
-    background: none;
-    color: #8F8E1C;
-    text-decoration: none
+a {
+    &:link {
+        background: none;
+        color: #8F8E1C;
+        text-decoration: none
+    }
+    &:visited {
+        background: none;
+        color: #336600;
+        text-decoration: none
+    }
+    &:hover {
+        background: none;
+        color: #0000CC;
+        text-decoration: none
+    }
 }
 
-A:visited {
-    background: none;
-    color: #336600;
-    text-decoration: none
-}
-
-A:hover {
-    background: none;
-    color: #0000CC;
-    text-decoration: none
-}
-
-.sansa {
-    font-family: Arial, Helvetica, sans-serif
-}
-
-.sansb,
-.sansa small b,
-.sansa b small,
-small.sansa b,
-small b.sansa {
-    font-family: "Myriad Web", Verdana, Helvetica, Arial, sans-serif
-}
-
-.serifa {
-    font-family: "Minion Web", Georgia, "new century schoolbook", Palatino, "Times New Roman", serif
-}
-
-small.sansa,
-.sansa small {
-    font-family: Helvetica, sans-serif
-}
-
-big.sansb,
-.sansb big {
-    font-family: "Myriad Web", Tahoma, Verdana, Helvetica, Arial, sans-serif
-}
-
-.min {
-    font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-h1 {
-    background: none;
-    color: #666633;
-    font-family: 'Arial', 'helvetica', sans-serif;
-}
-
-h2 {
-    background: none;
-    color: #666633;
-    font-family: 'Arial', 'helvetica', sans-serif;
-}
-
-h3 {
-    background: none;
-    color: #666633;
-    font-family: 'Arial', 'helvetica', sans-serif;
-}
-
-h4 {
-    background: none;
-    color: #666633;
-    font-family: 'Arial', 'helvetica', sans-serif;
-}
-
-h5 {
-    background: none;
-    color: #666633;
-    font-family: 'Arial', 'helvetica', sans-serif;
-}
-
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
     background: none;
     color: #666633;
     font-family: 'Arial', 'helvetica', sans-serif;
 }
 
-TD {
-    background-color: white;
-    color: black;
-    font-family: "Minion Web", Georgia, "new century schoolbook", Palatino, "Times New Roman", serif
-}
-
-P {
+p {
     background: none;
     color: black;
     font-family: "Minion Web", Georgia, "new century schoolbook", Palatino, "Times New Roman", serif
-}
-
-P.italics {
-    background: none;
-    color: black;
-    font-family: "Minion Web", "Georgia", "new century schoolbook", "Palatino", "Times New Roman", serif;
-    font-style: italic;
-}
-
-UL {
-    background: none;
-    color: black;
-    font-family: "Minion Web", Georgia, "new century schoolbook", Palatino, "Times New Roman", serif
-}
-
-LI {
-    background: none;
-    color: black;
-    font-family: "Minion Web", Georgia, "new century schoolbook", Palatino, "Times New Roman", serif
-}
-
-B {
-    background: none;
-    color: black;
-    font-family: "Minion Web", Georgia, "new century schoolbook", Palatino, "Times New Roman", serif;
-    font-weight: bold;
 }
