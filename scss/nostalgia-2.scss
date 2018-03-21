@@ -23,7 +23,7 @@ body {
 nav {    
     grid-column: nav-start / nav-end;
     grid-row: first-row-start / first-row-end;
-    margin-right: 15px;
+    // margin-right: 15px;
     background: url(../images/nostalgia-2/greenstrip.gif) repeat-y top right;
 }
 
@@ -31,7 +31,7 @@ section {
     grid-column: section-start / section-end;
     grid-row: first-row-start / first-row-end;
     background: url(../images/nostalgia-2/greenstrip.gif) repeat-y top right;
-    margin-right: 15px;    
+    // margin-right: 15px;    
 }
 
 .section__image {
