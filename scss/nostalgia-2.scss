@@ -8,11 +8,13 @@ body {
 
 .grid-wrapper {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, auto);
+    grid-template-columns: [mobile-column] 1fr;
+    grid-template-rows: repeat(4, auto);
+    padding: 1rem;
     @include media(">tablet") {
         grid-template-columns: [nav-start] 185px [nav-end section-start] 1fr [section-end];
         grid-template-rows: [first-row-start] auto [first-row-end second-row-start] auto [second-row-end];
+        padding: 0;
     }
     @include media(">desktop") {
         margin: 0 auto 0 auto;
@@ -20,34 +22,80 @@ body {
     }
 }
 
-nav {    
-    grid-column: nav-start / nav-end;
-    grid-row: first-row-start / first-row-end;
-    // margin-right: 15px;
-    background: url(../images/nostalgia-2/greenstrip.gif) repeat-y top right;
+.upper__left {
+    display: none;
+    @include media(">tablet") {
+        display: block;
+    }
+}
+
+.lower__left {
+    display: none;
+    @include media(">tablet") {
+        display: block;
+        grid-column: nav-start / nav-end;
+        grid-row: second-row-start;
+    }
+}
+
+.lower__right {
+    display: none;
+    @include media(">tablet") {
+        display: block;
+    }
+}
+
+.mobile__logo {
+    @include img-responsive(block);
+    @include center-block;
+    @include padding(null null 1rem null);
+    @include media(">tablet") {
+        display: none;
+    }
+}
+
+nav {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    @include media(">tablet") {
+        background: url(../images/nostalgia-2/greenstrip.gif) repeat-y top right;
+    }
+
+}
+
+.nav__map {
+    display: none;
+    @include media(">tablet") {
+        display: block;
+    }
 }
 
 section {
-    grid-column: section-start / section-end;
-    grid-row: first-row-start / first-row-end;
-    background: url(../images/nostalgia-2/greenstrip.gif) repeat-y top right;
-    // margin-right: 15px;    
+    grid-column: mobile-column;
+    grid-row: 2 / 3;
+
+    @include media(">tablet") {
+        grid-column: section-start / section-end;
+        grid-row: first-row-start / first-row-end;
+        background: url(../images/nostalgia-2/greenstrip.gif) repeat-y top right;
+    }
+
 }
 
 .section__image {
-    @include img-responsive(block);    
+    @include img-responsive(block);
     margin: 0 auto;
 }
 
-.design__element {
-    grid-column: nav-start / nav-end;
-    grid-row: second-row-start / second-row-end;
-    background: url(../images/nostalgia-2/greenstrip.gif) repeat-y top right;
-}
-
 footer {
-    grid-column: section-start / section-end;
-    grid-row: second-row-start / second-row-end;
+    grid-column: mobile-column;
+    grid-template-rows: 3 / 4;
+    @include media(">tablet") {
+        grid-column: section-start / section-end;
+        grid-row: second-row-start;
+    }
+
+    display: flex;
 }
 
 a {
@@ -77,10 +125,24 @@ h6 {
     background: none;
     color: #666633;
     font-family: 'Arial', 'helvetica', sans-serif;
+    margin-bottom: modular-scale(-2);
+}
+
+h1 {
+    font-size: modular-scale(2);
+    @include media(">desktop") {
+        font-size: modular-scale(3);
+    }
+}
+
+h2 {
+    font-size: modular-scale(1);
 }
 
 p {
-    background: none;
     color: black;
-    font-family: "Minion Web", Georgia, "new century schoolbook", Palatino, "Times New Roman", serif
+    font-family: $georgia;
+    font-size: modular-scale(0);
+    line-height: modular-scale(1);
+    margin-bottom: modular-scale(-2);
 }
