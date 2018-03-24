@@ -14,7 +14,10 @@ body {
     @include media(">tablet") {
         grid-template-columns: [nav-start] 185px [nav-end section-start] 1fr [section-end];
         grid-template-rows: [first-row-start] auto [first-row-end second-row-start] auto [second-row-end];
-        padding: 0;
+        padding: 0;        
+    }
+    @include media(">medium") {
+        background: url(../images/nostalgia-2/greenstrip.gif) repeat-y top right;
     }
     @include media(">desktop") {
         margin: 0 auto 0 auto;
@@ -57,10 +60,10 @@ body {
 nav {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    @include media(">tablet") {
-        background: url(../images/nostalgia-2/greenstrip.gif) repeat-y top right;
+    @include media(">medium") {
+        background: url(../images/nostalgia-2/greenstrip.gif) repeat-y top left,
+        url(../images/nostalgia-2/greenstrip.gif) repeat-y top right;
     }
-
 }
 
 .nav__map {
@@ -75,9 +78,12 @@ section {
     grid-row: 2 / 3;
 
     @include media(">tablet") {
+
+        max-width: 600px;
+        margin: 0 auto;
+
         grid-column: section-start / section-end;
         grid-row: first-row-start / first-row-end;
-        background: url(../images/nostalgia-2/greenstrip.gif) repeat-y top right;
     }
 
 }
@@ -92,10 +98,11 @@ footer {
     grid-template-rows: 3 / 4;
     @include media(">tablet") {
         grid-column: section-start / section-end;
-        grid-row: second-row-start;
+        grid-row: second-row-start / second-row-end;
     }
 
     display: flex;
+    justify-content: space-between;
 }
 
 a {
@@ -115,12 +122,12 @@ a {
         text-decoration: none
     }
 }
- 
+
 h1,
 h2,
 h3,
-h4, 
-h5, 
+h4,
+h5,
 h6 {
     background: none;
     color: #666633;
@@ -130,14 +137,14 @@ h6 {
 
 h1 {
     font-size: modular-scale(2);
-    @include media(">desktop") {
+    @include media(">medium") {
         font-size: modular-scale(3);
     }
 }
 
 h2 {
     font-size: modular-scale(1);
-} 
+}
 
 p {
     color: black;
