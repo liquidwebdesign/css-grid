@@ -1,0 +1,147 @@
+@import "base";
+
+@mixin bp($point) {
+
+	@if $point == xlarge {
+		@media (min-width: 1800px) { @content; }
+	}
+	@if $point == large {
+		@media (min-width: 1295px) { @content; }
+	}
+	@else if $point == medium {
+		@media (min-width: 600px) { @content; }
+	}
+	@else if $point == small {
+		@media (min-width: 500px)  { @content; }
+	}
+}
+
+$sans-serif-typeface: 'Roboto', sans-serif;
+$serif-typeface: 'Merriweather', serif;
+
+html,body {
+	height: 100%;
+}
+
+body {
+
+	transition: all .3s ease-in-out;
+
+	padding: 1rem;
+
+	font-family: $serif-typeface;
+
+	background: url(../img/eustress/eustress-bg-small.jpg) no-repeat top center fixed;
+	background-size: 300px 231px;
+
+	@include bp(medium) {
+		background: url(../img/eustress/eustress-bg-retina.jpg) no-repeat right 5% fixed;
+		background-size: 300px 231px;
+		// background-size: 500px 385px;
+		
+	}
+
+	@include bp(large) {
+
+		display: flex;
+		flex-flow: row nowrap;
+
+		background: url(../img/eustress/eustress-bg-retina.jpg) no-repeat left 35% fixed;
+		background-size: 600px 480px;
+	}
+
+}
+
+header {
+
+	width: 100%;
+	
+	transition: all .3s ease-in-out;
+
+	margin-top: 14rem;
+
+	@include bp(medium) { 
+
+		margin-top: .5rem;
+		width: 28rem;
+
+	}
+
+	@include bp(large) {
+
+		width: 35rem;
+		margin-left: 1rem;
+
+		flex: 1;
+
+		h2 {
+			width: 35rem;
+		}
+
+	}
+
+	h1,h2 {
+		font-family: $sans-serif-typeface;
+		margin: 0;
+		padding: 0;
+	}
+
+	h1 {
+
+		margin: 0 rem(-8);
+
+		font-style: normal;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+
+}
+
+article {
+	
+	transition: all .3s ease-in-out;
+
+	p:first-of-type {
+		margin-top: 0;
+	}
+
+	p {
+
+		line-height: 1.61803399rem;
+
+		@include bp(xlarge) {
+
+			// break-inside: avoid;
+			font-size: 1.2rem;
+			// line-height: 1.941640788rem;
+		}
+	}
+
+	@include bp(medium) {
+
+		padding-top: 2rem;
+
+		column-count: 2;
+		column-gap: 2rem;
+
+	}
+
+	@include bp(large) {
+
+		padding: 1rem;
+		flex: 1;
+
+	}
+
+	@include bp(xlarge) {
+
+		flex: 1;
+		column-count: 2;
+		
+		margin-right: 5rem;
+		
+	}
+
+}
+
+/*# sourceMappingURL=eustress.css.map */

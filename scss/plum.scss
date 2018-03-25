@@ -1,0 +1,188 @@
+@import "base";
+
+// Media Queries
+
+@mixin bp($point) {
+
+	@if $point == large {
+		@media (min-width: 1024px) { @content; }
+	}
+
+	@if $point == medium {
+		@media (min-width: 500px) { @content; }
+	}
+
+	@else if $point == small {
+		@media (min-width: 200px) { @content; }
+	}
+
+}
+
+// Typography
+
+// http://modularscale.com/scale/?px1=16&px2=&ra1=1.067&ra2=0
+
+@import "type/headline/bebas-neue";
+@import "type/serif/tinos";
+
+$headline-type: 'bebas_neue', sans-serif;
+$body-type: Tinos, Georgia, serif;
+
+// Global Styles
+
+html {
+	// -webkit-font-smoothing: none;
+	// -webkit-font-smoothing: subpixel-antialiased;
+	// -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25),only screen and ( min-device-pixel-ratio: 1.25),only screen and ( min-resolution: 200dpi),only screen and ( min-resolution: 1.25dppx)
+{
+	html {-webkit-font-smoothing: subpixel-antialiased;}
+}
+
+html,body {
+	height: 100%;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	border: 0;
+}
+
+// --Layout Styles
+
+.folio {
+
+	padding: 1rem;
+
+	font-family: $headline-type;
+	font-size: 1.139rem;
+	font-weight: 100;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-flow: row nowrap;
+	}
+
+	li {
+		list-style: none;
+		flex: 1;
+	}
+
+	ul li span {
+		float: right;
+	}
+
+}
+
+ul li span.edition {
+
+	display: none; 
+
+	@include bp(medium) {
+		display: block;
+	}
+
+}
+
+.headline {
+
+	color: #994f8e;
+
+	font-family: $headline-type;
+	text-transform: uppercase;
+	text-align: center;
+
+	span[class^="char"] {
+		margin-right: .2vw;
+	}
+	
+	margin: 0;
+	padding: 0;
+
+	font-size: 48vw;
+	line-height: 40vw;
+
+	@include bp(medium) {
+		font-size: 52vw;
+		line-height: 45vw;
+
+	}
+
+	@include bp(large) {
+		font-size: 54vw;
+		line-height: 42vw;
+
+	}
+
+}
+
+.backgroundclip .headline {
+
+	background: linear-gradient(to right, #994f8e 0%,#00394d 100%);
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+
+	@include bp(medium) {
+		background: url(../img/plum/concrete-wall-2.png) center center fixed,
+		linear-gradient(to right, #994f8e 0%,#00394d 100%);
+		-webkit-text-fill-color: transparent;
+		-webkit-background-clip: text;
+	}
+	
+}
+
+.byline {
+	font-family: $headline-type;
+	font-weight: 100;
+	font-size: 1.575rem;
+	margin-top: 1rem;
+	padding: 0;
+}
+
+.body {
+
+	font-family: $body-type;
+	font-size: 1.4rem;
+
+	p {
+		margin-bottom: 1rem;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+
+}
+
+.body-header {
+	padding: 1rem;
+}
+
+.body-layout {
+
+	@include bp(large) {
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		
+		div {
+			flex: 1;
+			min-width: 400px;
+			padding-right: .5rem;
+		}
+
+	}
+
+}
+
+/*# sourceMappingURL=plum.css.map */

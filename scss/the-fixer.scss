@@ -1,0 +1,223 @@
+@import "base";
+
+@mixin bp($point) {
+
+	@if $point == large {
+		@media (min-width: 1540px) { @content; }
+	}
+	@else if $point == medium {
+		@media (min-width: 800px) { @content; }
+	}
+	@else if $point == small {
+		@media (min-width: 300px)  { @content; }
+	}
+}
+
+// Typescale from
+// http://modularscale.com/scale/?px1=16&px2=&ra1=1.618&ra2=0
+
+$header-typeface: 'Source Sans Pro', sans-serif;
+$body-typeface: 'Libre Baskerville', serif;
+$content-margin: 1.618rem;
+
+.left { float: left; }
+.right { float: right; }
+
+html,body {
+	height: 100%; 
+}
+
+body {
+
+	display: flex;
+	flex-flow: column nowrap;
+
+	@include bp(large) {
+		flex-flow: row nowrap;
+	}
+
+}
+
+section {
+
+	// contains the header and the article
+
+	display: flex;
+	flex-flow: column nowrap;
+	// justify-content: space-between;
+
+	@include bp(medium) {
+		flex-flow: row nowrap;
+	}
+
+	@include bp(large) {
+		flex-flow: column nowrap;
+
+		flex: 1;
+		border-bottom: 1.618rem solid black;
+	}
+
+}
+
+header {
+
+	transition: all .3s ease-in-out;
+
+	flex: 1 0 auto;
+
+	order: 1;
+
+	padding-left: $content-margin;
+	padding-right: $content-margin;
+
+	font-family: $header-typeface;
+
+	a {
+		text-decoration: none;
+	}
+
+	h1 {
+		transition: all .3s ease-in-out;
+		font-size: 2.618rem;
+		margin: 0 0 .5rem 0;
+		
+	}
+
+	span.author {
+		font-size: 1rem;
+		text-transform: uppercase;
+	}
+
+	span.photographer {
+		font-size: .9rem;
+	}
+
+	@include bp(medium) {
+
+		flex: 1 0 150px;
+
+		order: 2;
+
+		h1 {
+			font-size: 4.236rem;
+			padding: 1rem 10rem 0 0;
+			text-decoration: none;
+			
+		}
+
+	}
+
+	@include bp(large) {
+
+		h1 {
+			font-size: 6.854rem;
+			padding: 0;
+			margin-bottom: 0;
+			text-decoration: underline;
+		}
+
+	}
+
+}
+
+article {
+
+	transition: all .3s ease-in-out;
+
+	flex: 0 1 auto;
+
+	order: 2;
+
+	padding-left: $content-margin;
+	padding-right: $content-margin;
+
+	background-color: white;
+
+	img {
+		filter: grayscale(100%);
+		display: none;
+		max-width: 100%;
+		height: auto;
+	}
+
+	p {
+		transition: all .3s ease-in-out;
+
+		font-size: 1rem;
+		line-height: 1.618rem;
+
+	}
+
+	em {
+		font-style: normal;
+	}
+
+	@include bp(medium) {
+
+		order: 1;
+
+		font-family: $body-typeface;
+		padding-bottom: 1rem;
+
+		p::before {
+
+			display: inline-block;
+			content: "";
+			background: url(../img/the-fixer/right-arrow.svg) no-repeat center center;
+			margin-right: .5rem;
+			width: 32px;
+			height: 32px;
+		}
+
+		article {
+			max-width: 300px;
+		}
+
+		p {
+			font-size: 1.618rem;
+			line-height: 2.618rem;
+		}
+
+		@include bp(large) {
+
+			padding-bottom: 0;
+
+			em {
+				font-family: $header-typeface;
+				font-size: 1.618rem;
+				text-decoration: underline;
+				font-style: normal;
+				font-weight: 900;
+			}
+
+			img {
+				display: block;
+				padding: 10px 10px 0 10px;
+			}
+
+		}
+
+	}
+
+}
+
+footer {
+	
+	// flex: 1 0 397px;
+	flex: 1 0 197px;
+	
+	background: url(../img/the-fixer/bg-medium.jpg) no-repeat center center; 
+	background-size: cover;
+
+	@include bp(medium) {
+		background: url(../img/the-fixer/bg-large.jpg) no-repeat center center;
+		background-size: cover;
+	}
+
+	@include bp(large) {
+		background: url(../img/the-fixer/bg-large.jpg) no-repeat center center fixed;
+		background-size: cover;
+	}
+
+}
+
