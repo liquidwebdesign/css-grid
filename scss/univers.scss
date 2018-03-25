@@ -1,0 +1,64 @@
+@import "core/core";
+
+$breakpoints: (phone: 720px, tablet: 768px, medium: 992px, desktop: 1250px);
+
+$red: #e00001;
+$blue: #000053;
+$orange: #f67002;
+$green: #1d4d14;
+
+html {
+    background: url(../images/univers/paper.jpg) repeat;
+}
+
+body {
+    margin-top: 1em;
+}
+
+.red {
+    background: $red;
+}
+
+.blue {
+    background: $blue;
+}
+
+.orange {
+    background: $orange;
+}
+
+.green {
+    background: $green;
+}
+
+@font-face {
+    font-family: 'Conv_UniversLTStd';
+    src: url('../type/UniversLTStd.eot?#iefix') format('embedded-opentype'),
+    url('../type/UniversLTStd.woff') format('woff'),
+    url('../type/UniversLTStd.ttf') format('truetype'),
+    url('../type/UniversLTStd.svg#svgFontName') format('svg');
+}
+
+.row div {
+    position: relative;
+    font-family: 'Conv_UniversLTStd', sans-serif;
+    height: 124px;
+    padding: .5em;
+}
+
+.row div p:first-child {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    color: white;
+}
+
+.row div p:last-child {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 1.7em;
+    color: black;
+}
+
