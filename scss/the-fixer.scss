@@ -1,4 +1,8 @@
-@import "base";
+@import "core/core";
+
+$breakpoints: (phone: 720px, tablet: 768px, medium: 992px, desktop: 1250px);
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Source+Sans+Pro');
 
 @mixin bp($point) {
 
@@ -163,7 +167,7 @@ article {
 
 			display: inline-block;
 			content: "";
-			background: url(../img/the-fixer/right-arrow.svg) no-repeat center center;
+			background: url(../images/the-fixer/right-arrow.svg) no-repeat center center;
 			margin-right: .5rem;
 			width: 32px;
 			height: 32px;
@@ -206,16 +210,16 @@ footer {
 	// flex: 1 0 397px;
 	flex: 1 0 197px;
 	
-	background: url(../img/the-fixer/bg-medium.jpg) no-repeat center center; 
+	background: url(../images/the-fixer/bg-medium.jpg) no-repeat center center; 
 	background-size: cover;
 
 	@include bp(medium) {
-		background: url(../img/the-fixer/bg-large.jpg) no-repeat center center;
+		background: url(../images/the-fixer/bg-large.jpg) no-repeat center center;
 		background-size: cover;
 	}
 
 	@include bp(large) {
-		background: url(../img/the-fixer/bg-large.jpg) no-repeat center center fixed;
+		background: url(../images/the-fixer/bg-large.jpg) no-repeat center center fixed;
 		background-size: cover;
 	}
 

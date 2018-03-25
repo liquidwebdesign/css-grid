@@ -1,4 +1,8 @@
-@import "base";
+@import "core/core";
+
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Roboto:300');
+
+$breakpoints: (phone: 720px, tablet: 768px, medium: 992px, desktop: 1250px);
 
 @mixin bp($point) {
 
@@ -31,11 +35,11 @@ body {
 
 	font-family: $serif-typeface;
 
-	background: url(../img/eustress/eustress-bg-small.jpg) no-repeat top center fixed;
+	background: url(../images/eustress/eustress-bg-small.jpg) no-repeat top center fixed;
 	background-size: 300px 231px;
 
 	@include bp(medium) {
-		background: url(../img/eustress/eustress-bg-retina.jpg) no-repeat right 5% fixed;
+		background: url(../images/eustress/eustress-bg-retina.jpg) no-repeat right 5% fixed;
 		background-size: 300px 231px;
 		// background-size: 500px 385px;
 		
@@ -46,7 +50,7 @@ body {
 		display: flex;
 		flex-flow: row nowrap;
 
-		background: url(../img/eustress/eustress-bg-retina.jpg) no-repeat left 35% fixed;
+		background: url(../images/eustress/eustress-bg-retina.jpg) no-repeat left 35% fixed;
 		background-size: 600px 480px;
 	}
 
@@ -143,5 +147,3 @@ article {
 	}
 
 }
-
-/*# sourceMappingURL=eustress.css.map */

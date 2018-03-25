@@ -1,0 +1,105 @@
+@import "core/core";
+
+@import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Open+Sans');
+
+$breakpoints: (phone: 720px, tablet: 768px, medium: 992px, desktop: 1250px);
+
+body {
+    background: #949896;
+    padding: 0.9375rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.625rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.375rem;
+}
+
+p {
+    font-family: 'Gentium Basic', serif;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+    color: #3f4141;
+}
+
+blockquote {
+    font-family: 'Gentium Basic', serif;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-style: italic;
+    margin-bottom: 2em;
+    color: #3f4141;
+}
+
+.col-wrapper {
+
+    border-radius: 5px;
+    box-shadow: 5px 0px 10px rgba(50, 50, 50, 0.75);
+    padding: 1rem;
+
+    column-count: 3;
+    column-gap: 2rem;
+    column-rule: 2px dotted #ccc;
+
+    background: #ffffff;
+}
+
+.col-wrapper h1 {
+    column-span: all;
+    padding: 0 0 .5rem 0;
+    color: #3f4141;
+}
+
+.col-wrapper h2 {
+    padding: 0 0 .5rem 0;
+    color: #3f4141;
+}
+
+.col-wrapper figure {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 0.875rem;
+    text-align: center;
+    margin: 0.625rem auto;
+}
+
+@media only screen and (max-width: 480px) {
+
+    h1 {
+        font-size: 1.425rem;
+    }
+
+    .col-wrapper {
+        column-count: 1;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+
+    .col-wrapper {
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .col-wrapper {
+        column-count: 3;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .col-wrapper {
+        column-count: 4;
+    }
+}

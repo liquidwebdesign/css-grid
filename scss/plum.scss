@@ -1,4 +1,6 @@
-@import "base";
+@import "core/core";
+
+$breakpoints: (phone: 720px, tablet: 768px, medium: 992px, desktop: 1250px);
 
 // Media Queries
 
@@ -130,7 +132,7 @@ ul li span.edition {
 	-webkit-background-clip: text;
 
 	@include bp(medium) {
-		background: url(../img/plum/concrete-wall-2.png) center center fixed,
+		background: url(../images/plum/concrete-wall-2.png) center center fixed,
 		linear-gradient(to right, #994f8e 0%,#00394d 100%);
 		-webkit-text-fill-color: transparent;
 		-webkit-background-clip: text;
@@ -184,5 +186,3 @@ ul li span.edition {
 	}
 
 }
-
-/*# sourceMappingURL=plum.css.map */
