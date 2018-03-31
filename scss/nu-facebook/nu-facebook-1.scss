@@ -1,0 +1,218 @@
+@import "../core/core";
+
+$breakpoints: (phone: 720px, tablet: 768px, medium: 992px, desktop: 1250px);
+
+@import "base";
+
+
+/**************************************
+Main Login Screen fb_login.html
+***************************************/
+
+html {
+	height: 100%;
+} 
+
+body {
+
+	transition: all .2s linear;
+	
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%; 
+	background: $darkblue;
+
+	@include breakpoint(large) {
+
+		background: $darkblue;
+
+		@include flexContainer;
+
+		@include flexColumn;
+
+		@include flexAlign(center);
+
+		@include flexJustify(center);
+		
+	} 
+
+}
+
+.outerWrapper {
+
+	background: $midblue;
+	box-shadow: 0px 0px 100px 10px black;
+
+
+	@include breakpoint(large) {
+		margin: 0 3em;
+	}
+
+}
+
+header {
+
+	padding: .5em 1em 0;
+
+	@include breakpoint(large) {
+		padding: 2.625em 2em 0;
+	}
+
+	h1 {
+		margin: 0;
+		padding: 0;
+		display: block;
+		text-indent: -9999px;
+		background: url(../img/nav/fb_logo.svg) no-repeat;
+	}
+
+	h1 + p {
+		font-size: 1.5rem;
+		margin: .8em 0;
+	}
+
+	p > span {
+		opacity: 0.7;
+	}
+
+	form {
+		background: transparent;
+	}
+
+	input:not([type="submit"]):not([type="checkbox"]) {	
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		width: 100%;
+		height: 3em;
+		padding: 1em;
+		margin-bottom: 1em;
+		border-radius: 2em;
+		border: none;
+		background: $darkblue;
+		box-shadow: 0 0 0 0 white,inset 0 2px 6px 0 black;
+		color: white;
+		outline: none;
+		transition: all 0.25s ease-in-out;
+
+		&:focus {
+			box-shadow: 0 0 15px 0 white,inset 0 2px 6px 0 black;
+		}
+
+	}
+
+	input[type=checkbox] {
+		display: none;
+	}
+
+	input[type=checkbox] + label span {
+		display: inline-block;
+		width: 18px;
+		height: 16px;
+		margin-right: .5em;
+		vertical-align: middle;
+		background: url('../img/nav/checkboxUncheck.png') left top no-repeat;
+		cursor: pointer;
+		transition: all 0.25s ease-in-out;
+	}
+
+	input[type=checkbox]:checked + label span {
+		background: url('../img/nav/checkboxChecked.png') left top no-repeat;
+		transition: all 0.25s ease-in-out;
+	}
+
+	label + span {
+		margin-left: 1em;
+		color: lighten($darkblue, 30%);
+	}
+
+	input[type=submit] {
+		width: 4.9375em;
+		height: 2.5em;
+		margin: 1em 1em 1em 0;
+		border-radius: 1em;
+		border: none;
+		background: $darkblue;
+		box-shadow: 0 2px 4px 0 black;
+		color: white;
+		outline: none;
+		background: linear-gradient(to bottom, #45a4fb 1%,#3878d6 100%);
+		transition: all 0.25s ease-in-out;
+
+		&:active {
+			opacity: .7;
+		}
+	}
+
+	hr {
+		display: none;
+	}
+
+	nav p span {
+		opacity: 1;
+		font-weight: 700;
+	}
+
+	nav {
+		display: none;
+	}
+
+	@include breakpoint(large) {
+
+		h1 + p {
+			margin: 1.5em 0;
+		}
+
+		input[type=submit] + span {
+			margin-left: 3em;
+			font-size: 1.5em;
+		}
+
+		nav {
+			display: inline;
+		}
+
+		hr {
+			display: block;
+			border: 0;
+			height: 0;
+			border-top: 1px solid rgba($darkblue, 0.9);
+			border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+		}
+
+	}
+
+	hr {
+		border: 0;
+		height: 0;
+		border-top: 1px solid rgba($darkblue, 0.9);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	}
+
+}
+
+footer {
+	margin: 0;
+	padding: .5em 1em 0;
+	background: $darkblue;
+	color: rgba(255, 255, 255, 0.5);
+	overflow: hidden;
+
+	span + span:before {
+		content: "• ";
+	}
+
+	@include breakpoint(large) {
+		padding: 1em 2em 1em;
+
+		span + span:before {
+			content: none;
+		}
+
+		span + span {
+			float: right;
+		}
+
+	}
+
+}
