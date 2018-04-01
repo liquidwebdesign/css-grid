@@ -1,0 +1,109 @@
+@import "core/core"; 
+
+A:link {
+    text-decoration: none;
+    color: #006666;
+}
+
+A:active {
+    text-decoration: none;
+    color: #660000;
+}
+
+A:visited {
+    text-decoration: none;
+    color: #003333;
+}
+
+A:hover {
+    text-decoration: none;
+    color: #CC3300;
+}
+
+body {
+    scrollbar-base-color: grey;
+    scrollbar-arrow-color: black;
+    background: #EFF3F3;
+    margin: 0;
+    padding: 0;
+}
+
+.sansa {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sansb,
+.sansa small b,
+.sansa b small,
+small.sansa b,
+small b.sansa {
+    font-family: "Myriad Web", Verdana, Helvetica, Arial, sans-serif;
+}
+
+.serifa {
+    font-family: "Minion Web", Georgia, Palatino, "Times New Roman", serif;
+}
+
+small.sansa,
+.sansa small {
+    font-family: Helvetica, sans-serif;
+}
+
+big.sansb,
+.sansb big {
+    font-family: "Myriad Web", Tahoma, Verdana, Helvetica, Arial, sans-serif;
+}
+
+.min {
+    font-family: "Myriad Web", Verdana, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+H1,
+H2,
+H3,
+H4,
+H5,
+H6 {
+    color: #339999;
+    background: none;
+    font-family: Verdana, Arial, helvetica, sans-serif;
+}
+
+P {
+    color: black;
+    background: none;
+    font-family: "Myriad Web", Verdana, Helvetica, Arial, sans-serif;
+    font-size: 10pt;
+}
+
+img {
+    vertical-align: text-bottom;
+}
+
+#navi a,
+#navi strong {
+    color: black;
+    font: 12px Verdana, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    border: 1px solid #000;
+
+    display: block;
+    width: 105px;
+    padding: 3px 5px;
+    margin: 7px;
+}
+
+#navi strong {
+    font-weight: bold;
+    background: #339999;
+}
+
+#navi a {
+    background: #FFF;
+
+}
+
+#navi a:hover {
+    background: #CC3300;
+}

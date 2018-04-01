@@ -2,19 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Cantarell:400,400i,700,700i|Fjalla+One');
 
-$breakpoints: (
-	'phone-portrait': 360px,
-	'phone-landscape': 600px,
-	'tablet-portrait': 720px,
-	'xsmall': 480px,
-	'small': 600px,
-	'xmedium': 840px,
-	'medium': 960px,
-	'large': 1280px,
-	'xlarge': 1440px,
-	'xxlarge': 1600px
-) !default;
-
 body {	
 	padding: 1rem;
 	font-family: 'Cantarell', sans-serif;	
