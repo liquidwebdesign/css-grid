@@ -1,61 +1,93 @@
-@import "core/core"; 
+@import "core/core";
 
-@import url('https://fonts.googleapis.com/css?family=Cantarell:400,400i,700,700i|Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
-body {	
-	padding: 1rem;
-	font-family: 'Cantarell', sans-serif;	
+body {
+    background: red;
+    padding: 1rem;
+    font-family: 'Roboto', sans-serif;
+
+    @include media(">xsmall") {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
 }
 
-.index__grid {				
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-template-rows: auto 1fr auto;
-	grid-gap: .5em;
+.index__outerGrid {
+
+    display: grid;
+    grid-template-columns: [col-start] 1fr;
+    grid-template-rows: repeat(3, [row-start] auto);
+    grid-gap: 1rem;
+
+    @include media(">xsmall") {
+        grid-template-columns: repeat(4, [col-start] 1fr);
+    }
+
 }
 
-.index__header {
-	grid-column: 1 / -1;
-	grid-row: 1 / 2;
+.index__name {
+
+    grid-column: col-start 1;
+    grid-row: row-start 1;
+
+    @include media(">xsmall") {
+        grid-column: col-start 3 / span 2;
+    }
+
 }
 
-.index__advanced {
-	grid-column: 1 / -1;
-	grid-row: 2 / 3;
+.index__innerGrid {
+
+    grid-column: col-start 1;
+    grid-row: row-start 2;
+
+    @include media(">xsmall") {
+        grid-column: col-start 1 / span 4;
+        grid-row: row-start 2;
+
+        display: grid;
+        grid-template-columns: repeat(4,
+        [col-start] 1fr);
+        grid-template-rows: [row-start] auto;
+        grid-gap: 1rem;
+    }
+
 }
 
 .index__footer {
-	grid-column: 1 / -1;
-	grid-row: 3 / 4;
+
+    grid-column: col-start 1;
+    grid-row: row-start 3;
+
+    @include media(">xsmall") {
+        grid-column: col-start 1 / span 4;
+        grid-row: row-start 3;
+    }
+
 }
 
 h1 {
-	font-family: 'Fjalla One', sans-serif;
-	font-weight: normal;
-	text-transform: uppercase;
-	line-height: 46px;
-	font-size: 43px;
-	margin: 0 0 24px 0;
+    font-weight: normal;
+    line-height: 46px;
+    font-size: 43px;
 }
 
 h2 {
-	font-family: 'Cantarell', sans-serif;
-	font-weight: 700;
-	font-size: 20px;
-	line-height: 23px;
-	text-transform: uppercase;
-	letter-spacing: -1px;
-	margin: 0 0 24px 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin: 0 0 24px 0;
 }
 
 p {
-	font-family: 'Cantarell', sans-serif;
-	font-size: 17px;
-	line-height: 23px;
-	margin: 0 0 23px 0;
+    font-size: 17px;
+    line-height: 23px;
+    margin: 0 0 23px 0;
 }
-
-ul {
-	margin-bottom: 8px;
-}
-
