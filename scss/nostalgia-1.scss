@@ -135,7 +135,7 @@ footer {
 
     @include media(">small") {
         grid-column: col-start 1 / span 3;
-
+        padding: 0;
     }
 
     @include media(">medium") {
