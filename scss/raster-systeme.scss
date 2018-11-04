@@ -5,32 +5,37 @@
 body {
   background-color: red;
   font-family: "Roboto", sans-serif;
-  font-size: modular-scale(1);
-  height: 95vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  @include media(">small") {
+    font-size: modular-scale(1);
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-.rs-grid {
-  max-width: 700px;
-  display: grid;
-  grid-template-areas:
-    ". . author author"
-    ". . . ."
-    "heading heading heading heading"
-    "text1 . text2 text2"
-    "subheading subheading subheading subheading"
-    "text3 . text4 text4"
-    ". . . ."
-    ". . text5 .";
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(8, minmax(100px, min-content));
-  grid-gap: 0.5rem;
-}
+@include media(">small") {
+  .rs-grid {
+    display: grid;
+    max-width: 800px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, minmax(100px, min-content));
+    grid-gap: 0.5rem;
+    grid-template-areas:
+      ". . author author"
+      ". . . ."
+      "heading heading heading heading"
+      "text1 . text2 text2"
+      "subheading subheading subheading subheading"
+      "text3 . text4 text4"
+      ". . . ."
+      ". . text5 .";
+  }
 
-.rs-grid > * {
-  border: 1px solid #ffb4ac;
+  .rs-grid > * {
+    border: 1px solid #ffb4ac;
+  }
 }
 
 .rs-grid__author {
@@ -39,7 +44,6 @@ body {
 
 .rs-grid__heading {
   grid-area: heading;
-  // font-size: modular-scale(5);
   @include responsive-font(10vw, modular-scale(2), modular-scale(5));
   font-weight: 700;
 }
