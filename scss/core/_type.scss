@@ -1,2 +1,102 @@
+// @author Chris Eppstein
+// @source https://github.com/sass/sass/issues/533#issuecomment-21445094
+@function convert($value, $unit) {
+  $convertable-units: px rem;
+  $conversion-factors: 1 1rem/16px;
+  @if index($convertable-units, unit($value)) and
+    index($convertable-units, $unit)
+  {
+    @return $value /
+      nth($conversion-factors, index($convertable-units, unit($value))) *
+      nth($conversion-factors, index($convertable-units, $unit));
+  } @else {
+    @error 'Cannot convert #{unit($value)} to #{$unit}';
+  }
+}
 
+// Calculate the definition of a line between two points
+// @author Jake Wilson <jake.e.wilson@gmail.com>
+@function linear-interpolation($map) {
+  $keys: map-keys($map);
+  @if (length($keys) != 2) {
+    @error 'linear-interpolation() $map must be exactly 2 values';
+  }
 
+  // Variables for readability
+  $x1: nth($keys, 1);
+  $x2: nth($keys, 2);
+  $y1: map-get($map, $x1);
+  $y2: map-get($map, $x2);
+
+  // Unit used in unit conversions
+  $unit: unit($y1);
+
+  // The slope
+  $m: convert($y2 - $y1, $unit) / convert($x2 - $x1, $unit);
+
+  // The y-intercept
+  $b: convert($y1, $unit) - $m * convert($x1, $unit);
+
+  // Determine if the sign should be positive or negative
+  $sign: "+";
+  @if ($b < 0) {
+    $sign: "-";
+    $b: abs($b);
+  }
+
+  @return calc(#{$m * 100}vw #{$sign} #{$b});
+}
+
+// @author Jake Wilson <jake.e.wilson@gmail.com>
+// @source https://www.smashingmagazine.com/2017/05/fluid-responsive-typography-css-poly-fluid-sizing/
+// @modified by Robert Al-Romhein <robert.alromhein@gmail.com>
+//   Modified to use our breakpoints map instead of fixed pixel sizes
+@mixin responsive-fluid($property, $map) {
+  $length: length(map-keys($map));
+  @if ($length < 2) {
+    @error 'responsive-fluid() $map requires at least values';
+  }
+
+  $keys: map-keys($map); // Minimum size
+  #{$property}: map-get(
+    $map,
+    nth($keys, 1)
+  ); // Interpolated size through breakpoints
+
+  @for $i from 1 through ($length - 1) {
+    @media screen and (min-width: map-get($ft-breakpoints, nth($keys, $i))) {
+      // Variables for readability
+      $value1: map-get($map, nth($keys, $i));
+      $value2: map-get($map, nth($keys, ($i + 1)));
+      $breakpoint1: map-get($ft-breakpoints, nth($keys, $i));
+      $breakpoint2: map-get($ft-breakpoints, nth($keys, ($i + 1)));
+
+      // If values are not equal, perform linear interpolation
+      @if ($value1 != $value2) {
+        #{$property}: $value1; // Fallback for browsers that don't support calc
+        #{$property}: linear-interpolation(
+          (
+            $breakpoint1: $value1,
+            $breakpoint2: $value2
+          )
+        );
+      } @else {
+        #{$property}: $value1;
+      }
+    }
+  }
+  // Maximum size
+  @media screen and (min-width: map-get($ft-breakpoints, nth($keys, $length))) {
+    #{$property}: map-get($map, nth($keys, $length));
+  }
+}
+// @author Robert Al-Romhein <robert.alromhein@gmail.com>
+@mixin responsive($property, $map) {
+  $keys: map-keys($map); // Minimum size
+  #{$property}: map-get($map, nth($keys, 1));
+  @each $key, $value in $map {
+    @media screen and (min-width: map-get($ft-breakpoints, $key)) {
+      #{$property}: $value;
+    }
+  }
+}
