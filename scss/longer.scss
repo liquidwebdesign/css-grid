@@ -1,0 +1,77 @@
+@import "core/core";
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700");
+
+$breakpoints: (
+  "small": 385px
+);
+
+$ft-breakpoints: (
+  small: 480px,
+  medium: 800px
+);
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #959ca6;
+  padding: 0.5rem;
+}
+.longer__grid {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "image"
+    "heading"
+    "copy"
+    "pagenumber1"
+    "pagenumber2";
+  @include media(">small") {
+    height: 100vh;
+    grid-template-columns: 6fr;
+    grid-template-rows: repeat(3, min-content);
+    grid-template-areas:
+      "heading . image image image image"
+      "copy copy copy copy copy copy"
+      ". pagenumber1 . . pagenumber2 .";
+  }
+}
+.longer__image {
+  grid-area: image;
+  @include img-responsive;
+}
+.longer__heading {
+  grid-area: heading;
+  @include responsive-fluid(
+    font-size,
+    (
+      small: 2rem,
+      medium: 5.61rem
+    )
+  );
+  // font-weight: 700;
+}
+.longer__copy {
+  grid-area: copy;
+  @include responsive-fluid(
+    font-size,
+    (
+      small: 1.333rem,
+      medium: 2rem
+    )
+  );
+}
+.longer__pagenumber1,
+.longer__pagenumber2 {
+  display: none;
+  @include media(">small") {
+    display: block;
+  }
+}
+.longer__pagenumber1 {
+  grid-area: pagenumber1;
+}
+.longer__pagenumber2 {
+  grid-area: pagenumber2;
+}
