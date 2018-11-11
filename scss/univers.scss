@@ -1,6 +1,13 @@
 @import "core/core";
 
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
 $breakpoints: (phone: 720px, tablet: 768px, medium: 992px, desktop: 1250px);
+
+$ft-breakpoints: (
+  small: 480px,
+  medium: 800px  
+);
 
 $red: #e00001;
 $blue: #000053;
@@ -12,7 +19,27 @@ html {
 }
 
 body {
+    font-family: 'Oswald', sans-serif;
     margin-top: 1em;
+    color: white;
+}
+
+.univers-grid-container {
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, auto);
+  grid-gap: 0.5rem;
+  grid-template-areas:
+    "heading"
+    "author"
+    "text1"
+    "text2"
+    "subheading"
+    "text3"
+    "text4"
+    "text5";
+
 }
 
 .red {
@@ -31,34 +58,4 @@ body {
     background: $green;
 }
 
-@font-face {
-    font-family: 'Conv_UniversLTStd';
-    src: url('../type/UniversLTStd.eot?#iefix') format('embedded-opentype'),
-    url('../type/UniversLTStd.woff') format('woff'),
-    url('../type/UniversLTStd.ttf') format('truetype'),
-    url('../type/UniversLTStd.svg#svgFontName') format('svg');
-}
-
-.row div {
-    position: relative;
-    font-family: 'Conv_UniversLTStd', sans-serif;
-    height: 124px;
-    padding: .5em;
-}
-
-.row div p:first-child {
-    margin: 0;
-    padding: 0;
-    font-size: 1em;
-    color: white;
-}
-
-.row div p:last-child {
-    position: absolute;
-    bottom: 0;
-    margin: 0;
-    padding: 0;
-    font-size: 1.7em;
-    color: black;
-}
 
