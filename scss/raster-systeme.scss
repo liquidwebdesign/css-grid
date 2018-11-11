@@ -2,26 +2,56 @@
 
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 
+$breakpoints: (
+  "small": 385px
+);
+
+$ft-breakpoints: (
+  small: 480px,
+  medium: 800px  
+);
+
 body {
   background-color: red;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;  
+  padding: 1rem;
 
-  @include media(">small") {
-    font-size: modular-scale(1);
+  @include responsive-fluid(
+      font-size,
+      (
+        small: 1rem,
+        medium: 1.333rem        
+      )
+    );
+
+  @include media(">small") {    
     height: 95vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;    
   }
+}
+
+.rs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, auto);
+  grid-gap: 0.5rem;
+  grid-template-areas:
+    "heading"
+    "author"
+    "text1"
+    "text2"
+    "subheading"
+    "text3"
+    "text4"
+    "text5";
 }
 
 @include media(">small") {
   .rs-grid {
-    display: grid;
     max-width: 800px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(8, minmax(100px, min-content));
-    grid-gap: 0.5rem;
     grid-template-areas:
       ". . author author"
       ". . . ."
@@ -38,27 +68,37 @@ body {
   }
 }
 
-.rs-grid__author {
-  grid-area: author;
+@mixin heading-styles {
+  @include responsive-fluid(
+    font-size,
+    (
+      small: 2.369rem,
+      medium: 4.209rem      
+    )
+  );  
 }
 
 .rs-grid__heading {
   grid-area: heading;
-  @include responsive-font(10vw, modular-scale(2), modular-scale(5));
+  @include heading-styles;
   font-weight: 700;
-}
-
-.rs-grid__subheading {
-  grid-area: subheading;
-  @include responsive-font(10vw, modular-scale(2), modular-scale(5));
 }
 
 .rs-grid__text1 {
   grid-area: text1;
 }
 
+.rs-grid__author {
+  grid-area: author;
+}
+
 .rs-grid__text2 {
   grid-area: text2;
+}
+
+.rs-grid__subheading {
+  grid-area: subheading;
+  @include heading-styles;
 }
 
 .rs-grid__text3 {
