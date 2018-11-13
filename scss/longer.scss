@@ -13,14 +13,14 @@ $ft-breakpoints: (
 
 body {
   font-family: "Roboto Condensed", sans-serif;
-  color: #959ca6;
-  padding: 0.5rem;
+  color: #b8473f;
+  padding: 1rem;
 }
 .longer__grid {
   display: grid;
   grid-gap: 0.5rem;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, auto);
+  grid-template-rows: repeat(5, auto);
   grid-template-areas:
     "image"
     "heading"
@@ -28,12 +28,11 @@ body {
     "pagenumber1"
     "pagenumber2";
   @include media(">small") {
-    height: 100vh;
-    grid-template-columns: 6fr;
-    grid-template-rows: repeat(3, min-content);
+    // height: 100vh;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, auto);
     grid-template-areas:
-      "heading . image image image image"
-      "copy copy copy copy copy copy"
+      "heading heading image image image image"          
       ". pagenumber1 . . pagenumber2 .";
   }
 }
@@ -54,6 +53,10 @@ body {
 }
 .longer__copy {
   grid-area: copy;
+  @include media(">small") {
+    grid-area: heading-start / heading-start / image-end / image-end; 
+    align-self: end;
+  }
   @include responsive-fluid(
     font-size,
     (
