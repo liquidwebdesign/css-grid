@@ -77,6 +77,7 @@ body {
     grid-area: heading-start / heading-start / image-end / image-end;
     align-self: end;
     padding-bottom: 0.5rem;
+    padding-right: 0.5rem;
   }
   @include responsive-fluid(
     font-size,
