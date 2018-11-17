@@ -11,10 +11,42 @@
 
   <body>
     <article class="longer__grid">
-      <img
-        data-src="https://res.cloudinary.com/liquidweb/image/upload/w_auto,dpr_auto,c_scale,f_auto,q_80,e_grayscale/v1541907302/grid/longer/tamara-bellis-406807-unsplash.jpg"
-        class="cld-responsive longer__image"
-      />
+      <picture class="longer__image__container">
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            https://res.cloudinary.com/liquidweb/image/upload/w_1200,dpr_2,c_fill,f_auto,q_auto,e_grayscale/v1541907302/grid/longer/tamara-bellis-406807-unsplash.jpg 1200w
+          "
+          sizes="1200px"
+        />
+
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            https://res.cloudinary.com/liquidweb/image/upload/w_992,dpr_2,c_fill,f_auto,q_auto,e_grayscale/v1541907302/grid/longer/tamara-bellis-406807-unsplash.jpg 992w
+          "
+          sizes="992px"
+        />
+
+        <source
+          media="(min-width: 576px)"
+          srcset="
+            https://res.cloudinary.com/liquidweb/image/upload/w_768,h_768,dpr_2,c_fill,f_auto,q_auto,g_east,e_grayscale/v1541907302/grid/longer/tamara-bellis-406807-unsplash.jpg 768w
+          "
+          sizes="768px"
+        />
+
+        <!-- standard crop -->
+        <img
+          class="cld-responsive longer__image"
+          srcset="
+            https://res.cloudinary.com/liquidweb/image/upload/w_576,h_576,dpr_2,c_fill,f_auto,q_auto,g_auto,e_grayscale/v1541907302/grid/longer/tamara-bellis-406807-unsplash.jpg 576w
+          "
+          src="https://res.cloudinary.com/liquidweb/image/upload/w_576,h_576,dpr_2,c_fill,f_auto,q_auto,g_auto,e_grayscale/v1541907302/grid/longer/tamara-bellis-406807-unsplash.jpg"
+          alt="President Obama on the phone in the Oval Office"
+          sizes="100vw"
+        />
+      </picture>
 
       <h1 class="longer__heading">Longer</h1>
 
@@ -25,8 +57,42 @@
           href="#https://unsplash.com/@tamarabellis?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
           >Tamara Bellis</a
         >
-        styling First Lastname.
+        styling Jonathon Kayne.
       </p>
+
+      <article class="longer__article">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+          corporis sit iste nostrum eos deserunt culpa, natus sunt officiis
+          placeat iure modi aut non quis ullam, ab assumenda harum accusantium,
+          nam animi. Culpa architecto quos dolores sequi laborum nostrum beatae
+          sit debitis dolor animi ex quaerat quis laudantium, explicabo nemo?
+        </p>
+        <p>
+          Assumenda distinctio ab optio fuga velit nihil expedita temporibus
+          sint ducimus error atque at eos laborum facere quae nisi maiores
+          necessitatibus illum, voluptatibus aspernatur. Labore similique
+          recusandae voluptates et nostrum, vel officia minus facere aperiam
+          iusto rem deserunt eum neque harum animi? Fugit sapiente accusantium
+          quas id vel sed distinctio.
+        </p>
+        <p>
+          Minima harum adipisci cupiditate error, maiores veritatis itaque
+          voluptatem corrupti asperiores iure similique aperiam qui laborum
+          alias, a doloremque quia, nemo obcaecati eos non! Adipisci eligendi
+          maxime vitae eos quos error magni voluptatum delectus est nobis rem
+          facilis fugit rerum hic suscipit placeat dolores sed quod, vel dolorum
+          nostrum. Quasi!
+        </p>
+        <p>
+          Beatae numquam soluta, at nulla dolor natus perspiciatis deserunt
+          distinctio odio, placeat culpa repudiandae eius corporis. Omnis
+          blanditiis ipsum accusantium rem incidunt! Delectus necessitatibus
+          quam dolor officiis molestias fugit animi vitae? Nostrum animi
+          sapiente, magni facere quos obcaecati, sed hic fuga debitis eaque,
+          saepe neque aperiam mollitia est natus distinctio.
+        </p>
+      </article>
 
       <span class="longer__pagenumber1">228</span>
 

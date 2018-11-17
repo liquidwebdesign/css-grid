@@ -1,43 +1,62 @@
 @import "core/core";
 
-@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto+Condensed");
 
 $breakpoints: (
-  "small": 385px
+  "small": 576px,
+  "medium": 768px,
+  "large": 992px,
+  "xlarge": 1200px
 );
 
 $ft-breakpoints: (
-  small: 480px,
-  medium: 800px
+  small: 576px,
+  medium: 768px,
+  large: 992px,
+  xlarge: 1200px
 );
 
+$heading-type: "Roboto Condensed", sans-serif;
+$body-type: "Montserrat", sans-serif;
+
 body {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: $heading-type;
   color: #b8473f;
   padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .longer__grid {
   display: grid;
   grid-gap: 0.5rem;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: repeat(6, auto);
   grid-template-areas:
     "image"
     "heading"
     "copy"
+    "content"
     "pagenumber1"
     "pagenumber2";
   @include media(">small") {
-    // height: 100vh;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-template-areas:
-      "heading heading image image image image"          
+      "heading heading image image image image"
+      "content content content content content content"
+      ". pagenumber1 . . pagenumber2 .";
+  }
+  @include media(">xlarge") {
+    grid-template-areas:
+      "heading heading image image image image"
+      ". . content content content content"
       ". pagenumber1 . . pagenumber2 .";
   }
 }
-.longer__image {
+.longer__image__container {
   grid-area: image;
+}
+.longer__image {
   @include img-responsive;
 }
 .longer__heading {
@@ -45,25 +64,53 @@ body {
   @include responsive-fluid(
     font-size,
     (
-      small: 2rem,
-      medium: 5.61rem
+      small: 2.369rem,
+      medium: 3.157rem,
+      large: 5.61rem,
+      xlarge: 7.478rem
     )
   );
-  // font-weight: 700;
 }
 .longer__copy {
   grid-area: copy;
   @include media(">small") {
-    grid-area: heading-start / heading-start / image-end / image-end; 
+    grid-area: heading-start / heading-start / image-end / image-end;
     align-self: end;
+    padding-bottom: 0.5rem;
   }
   @include responsive-fluid(
     font-size,
     (
       small: 1.333rem,
-      medium: 2rem
+      medium: 1.777rem,
+      large: 2.369rem
     )
   );
+}
+.longer__article {
+  grid-area: content;
+  margin-top: 1.333rem;
+  p {
+    color: black;
+    margin-bottom: 1rem;
+    font-family: $body-type;
+    @include responsive-fluid(
+      font-size,
+      (
+        small: 1rem,
+        medium: 1.333rem,
+        large: 1.777rem
+      )
+    );
+    @include responsive-fluid(
+      line-height,
+      (
+        small: 1.333rem,
+        medium: 1.777rem,
+        large: 2.369rem
+      )
+    );
+  }
 }
 .longer__pagenumber1,
 .longer__pagenumber2 {
