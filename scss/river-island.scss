@@ -8,16 +8,36 @@ $sans-serif: "Hind", sans-serif;
 .ri__grid {
   padding: 1rem;
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  grid-template-rows: repeat(6, auto);
   grid-gap: 0.624rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(13, auto);
+
   grid-template-areas:
-    "caption1 caption1 image1 image1 image1 credits1"
-    "image2 image2 image2 image2 credits2 ."
-    "credits3 . . caption3 caption3 caption3"
-    "image4 image4 credits4 image5 image5 image5"
-    "caption5 caption5 caption5 caption5 . ."
-    "image6 image6 image6 credits6 . .";
+    "caption1"
+    "image1"
+    "credits1"
+    "image2"
+    "credits2"
+    "credits3"
+    "caption3"
+    "image4"
+    "credits4"
+    "image5"
+    "caption5"
+    "image6"
+    "credits6";
+
+  @include media(">small") {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      "caption1 caption1 image1 image1 image1 credits1"
+      "image2 image2 image2 image2 credits2 ."
+      "credits3 . . caption3 caption3 caption3"
+      "image4 image4 credits4 image5 image5 image5"
+      "caption5 caption5 caption5 caption5 . ."
+      "image6 image6 image6 credits6 . .";
+  }
 }
 
 // Row 1
