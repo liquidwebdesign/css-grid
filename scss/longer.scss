@@ -99,16 +99,14 @@ body {
       font-size,
       (
         small: 1rem,
-        medium: 1.333rem,
-        large: 1.777rem
+        medium: 1.333rem        
       )
     );
     @include responsive-fluid(
       line-height,
       (
         small: 1.333rem,
-        medium: 1.777rem,
-        large: 2.369rem
+        medium: 1.777rem        
       )
     );
   }
