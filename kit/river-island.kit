@@ -6,6 +6,7 @@
     <title>River Island</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../../css/river-island.css" />
+    <script src="../js/cloudinary-core-shrinkwrap.min.js"></script>
   </head>
 
   <body>
@@ -16,16 +17,9 @@
       </blockquote>
 
       <img
-        class="ri__image1"
-        src="../../images/river-island/DowningStreet-900w.jpg"
-        sizes="100vw"
-        srcset="
-          ../../images/river-island/DowningStreet-600w.jpg   600w,
-          ../../images/river-island/DowningStreet-900w.jpg   900w,
-          ../../images/river-island/DowningStreet-1200w.jpg 1200w,
-          ../../images/river-island/DowningStreet-1800w.jpg 1800w
-        "
-        alt="DowningStreet"
+        data-src="https://res.cloudinary.com/liquidweb/image/upload/w_auto,c_scale,dpr_auto,q_auto,e_grayscale/grid/riverisland/downing-street.jpg"
+        class="cld-responsive ri__image1"
+        alt="Downing Street"
       />
 
       <figure class="ri__credits1">
@@ -44,9 +38,9 @@
       <!-- 2nd row -->
 
       <img
-        class="ri__image2"
-        src="../../images/river-island/river-island-2.jpg"
-        alt="Man wearing watch and jacket"
+        data-src="https://res.cloudinary.com/liquidweb/image/upload/w_auto,c_scale,dpr_auto,q_auto,e_grayscale/grid/riverisland/business-time.jpg"
+        class="cld-responsive ri__image2"
+        alt="Business Time"
       />
       <figure class="ri__credits2">
         <figcaption>
@@ -73,7 +67,7 @@
 
       <img
         class="ri__image4"
-        src="../../images/river-island/river-island-3.jpg"
+        src="https://res.cloudinary.com/liquidweb/image/upload/v1542882288/grid/riverisland/river-island-3.jpg"
         alt="Man wearing jacket standing next to a motorbike"
       />
       <figure class="ri__credits4">
@@ -90,7 +84,7 @@
       </figure>
       <img
         class="ri__image5"
-        src="../../images/river-island/river-island-4.jpg"
+        src="https://res.cloudinary.com/liquidweb/image/upload/v1542882288/grid/riverisland/river-island-4.jpg"
         alt="Man wearing hat coat and long black jacket"
       />
 
@@ -104,14 +98,14 @@
       <!-- 6th row -->
 
       <img
-        class="ri__image6"
-        src="../../images/river-island/river-island-5.jpg"
-        alt=""
+        data-src="https://res.cloudinary.com/liquidweb/image/upload/w_auto,c_scale,dpr_auto,q_auto,e_grayscale/grid/riverisland/seated-man.jpg"
+        class="cld-responsive ri__image6"
+        alt="Downing Street"
       />
+
       <figure class="ri__credits6">
         <figcaption>explanatory credit</figcaption>
       </figure>
-
     </div>
 
     <!-- @import 'includes/global-footer' -->
