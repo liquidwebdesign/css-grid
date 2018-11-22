@@ -1,93 +1,77 @@
 @import "core/core";
 
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
 body {
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
 
-    padding: 1rem;
-    font-family: 'Roboto', sans-serif;
-
-    @include media(">xsmall") {
-        height: 100vh;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-    }
+  @include media(">xsmall") {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .index__outerGrid {
+  display: grid;
+  grid-template-columns: [col-start] 1fr;
+  grid-template-rows: repeat(3, [row-start] auto);
+  grid-gap: 1rem;
 
-    display: grid;
-    grid-template-columns: [col-start] 1fr;
-    grid-template-rows: repeat(3, [row-start] auto);
-    grid-gap: 1rem;
-
-    @include media(">xsmall") {
-        grid-template-columns: repeat(4, [col-start] 1fr);
-    }
-
+  @include media(">xsmall") {
+    grid-template-columns: repeat(4, [col-start] 1fr);
+  }
 }
 
 .index__name {
+  grid-column: col-start 1;
+  grid-row: row-start 1;
 
-    grid-column: col-start 1;
-    grid-row: row-start 1;
-
-    @include media(">xsmall") {
-        grid-column: col-start 3 / span 2;
-    }
-
+  @include media(">xsmall") {
+    grid-column: col-start 3 / span 2;
+  }
 }
 
 .index__innerGrid {
+  grid-column: col-start 1;
+  grid-row: row-start 2;
 
-    grid-column: col-start 1;
+  @include media(">xsmall") {
+    grid-column: col-start 1 / span 4;
     grid-row: row-start 2;
 
-    @include media(">xsmall") {
-        grid-column: col-start 1 / span 4;
-        grid-row: row-start 2;
-
-        display: grid;
-        grid-template-columns: repeat(4,
-        [col-start] 1fr);
-        grid-template-rows: [row-start] auto;
-        grid-gap: 1rem;
-    }
-
+    display: grid;
+    grid-template-columns: repeat(4, [col-start] 1fr);
+    grid-template-rows: [row-start] auto;
+    grid-gap: 1rem;
+  }
 }
-
 .index__footer {
-
-    grid-column: col-start 1;
+  grid-column: col-start 1;
+  grid-row: row-start 3;
+  @include media(">xsmall") {
+    grid-column: col-start 1 / span 4;
     grid-row: row-start 3;
-
-    @include media(">xsmall") {
-        grid-column: col-start 1 / span 4;
-        grid-row: row-start 3;
-    }
-
+  }
 }
-
 h1 {
-    font-weight: normal;
-    line-height: 46px;
-    font-size: 43px;
+  font-weight: normal;
+  line-height: 46px;
+  font-size: 43px;
 }
-
 h2 {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 23px;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-    margin: 0 0 24px 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin: 0 0 24px 0;
 }
-
 p {
-    font-size: 17px;
-    line-height: 23px;
-    margin: 0 0 23px 0;
+  font-size: 17px;
+  line-height: 23px;
+  margin: 0 0 23px 0;
 }
