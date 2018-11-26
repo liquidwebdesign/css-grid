@@ -10,7 +10,6 @@ $sans-serif: "Hind", sans-serif;
   display: grid;
   grid-gap: 0.624rem;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(18, auto);
   grid-template-areas:
     "caption1"
     "image1"
