@@ -32,7 +32,7 @@ $sans-serif: "Hind", sans-serif;
 
   @include media(">small") {
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    grid-template-rows: 150px 100px 100px 400px 100px 300px 50px 400px;
+    grid-template-rows: 350px 200px 150px 350px 100px 300px 200px 300px;
     grid-template-areas:
       "caption1 caption1 image1 image1 image1 credits1"
       "image2 image2 image2 image2 credits2 ."
