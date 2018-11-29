@@ -32,7 +32,7 @@ $sans-serif: "Hind", sans-serif;
 
   @include media(">small") {
     grid-template-columns: repeat(6, minmax(0, 1fr));
-    grid-template-rows: repeat(8, auto);
+    grid-template-rows: 150px 100px 100px 400px 100px 300px 50px 400px;
     grid-template-areas:
       "caption1 caption1 image1 image1 image1 credits1"
       "image2 image2 image2 image2 credits2 ."
@@ -45,6 +45,10 @@ $sans-serif: "Hind", sans-serif;
   }
 }
 
+img {
+  @include img-grid(cover);
+  object-position: 0 0;
+}
 // Row 1
 
 .ri__caption1 {
@@ -52,7 +56,6 @@ $sans-serif: "Hind", sans-serif;
 }
 
 .ri__image1 {
-  @include img-responsive;
   grid-area: image1;
 }
 
@@ -63,7 +66,6 @@ $sans-serif: "Hind", sans-serif;
 // Row 2
 
 .ri__image2 {
-  @include img-responsive;
   grid-area: image2;
 }
 
@@ -83,7 +85,6 @@ $sans-serif: "Hind", sans-serif;
 // Row 4
 
 .ri__image4 {
-  @include img-responsive;
   grid-area: image4;
 }
 
@@ -92,7 +93,6 @@ $sans-serif: "Hind", sans-serif;
 }
 
 .ri__image5 {
-  @include img-responsive;
   grid-area: image5;
 }
 
@@ -101,7 +101,6 @@ $sans-serif: "Hind", sans-serif;
 }
 
 .ri__image6 {
-  @include img-responsive;
   grid-area: image6;
 }
 
@@ -110,7 +109,6 @@ $sans-serif: "Hind", sans-serif;
 }
 
 .ri__image7 {
-  @include img-responsive;
   grid-area: image7;
 }
 
@@ -123,12 +121,10 @@ $sans-serif: "Hind", sans-serif;
 }
 
 .ri__image8 {
-  @include img-responsive;
   grid-area: image8;
 }
 
 .ri__image9 {
-  @include img-responsive;
   grid-area: image9;
 }
 
