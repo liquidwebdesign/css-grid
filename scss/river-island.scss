@@ -5,6 +5,11 @@
 $serif: "Lora", serif;
 $sans-serif: "Hind", sans-serif;
 
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .ri__grid {
   padding: 1rem;
   display: grid;
@@ -46,8 +51,7 @@ $sans-serif: "Hind", sans-serif;
 }
 
 img {
-  @include img-grid(cover);
-  object-position: 0 0;
+  @include img-responsive-grid(cover);
 }
 // Row 1
 
@@ -57,6 +61,7 @@ img {
 
 .ri__image1 {
   grid-area: image1;
+  object-position: position(center);
 }
 
 .ri__credits1 {
@@ -67,6 +72,7 @@ img {
 
 .ri__image2 {
   grid-area: image2;
+  object-position: position(top-left);
 }
 
 .ri__credits2 {
@@ -86,6 +92,7 @@ img {
 
 .ri__image4 {
   grid-area: image4;
+  object-position: position(bottom-left);
 }
 
 .ri__credits4 {
@@ -94,6 +101,7 @@ img {
 
 .ri__image5 {
   grid-area: image5;
+  object-position: position(top-left);
 }
 
 .ri__caption5 {
@@ -102,6 +110,7 @@ img {
 
 .ri__image6 {
   grid-area: image6;
+  object-position: position(bottom-left);
 }
 
 .ri__credits6 {
@@ -110,6 +119,7 @@ img {
 
 .ri__image7 {
   grid-area: image7;
+  object-position: position(top-left);
 }
 
 .ri__credits7 {
@@ -122,10 +132,12 @@ img {
 
 .ri__image8 {
   grid-area: image8;
+  object-position: position(center);
 }
 
 .ri__image9 {
   grid-area: image9;
+  object-position: position(up);
 }
 
 blockquote {

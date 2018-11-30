@@ -1,4 +1,38 @@
 @function calculateRem($size) {
-    $remSize: $size / 16px;
-    @return #{$remSize}rem;
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+$position-type: (
+  center: (
+    50% 50%
+  ),
+  bottom-right: (
+    100% 100%
+  ),
+  bottom-left: (
+    0 100%
+  ),
+  top-left: (
+    0 0
+  ),
+  up: (
+    50% 120%
+  ),
+  down: (
+    50% -20%
+  ),
+  left: (
+    120% 50%
+  ),
+  right: (
+    -20% 50%
+  )
+);
+@function position($position) {
+  @if map-has-key($position-type, $position) {
+    @return map-get($position-type, $position);
+  }
+  @warn "The key #{$position} is not in the map ’$position’";
+  @return null;
 }

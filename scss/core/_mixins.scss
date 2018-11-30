@@ -4,7 +4,7 @@
   height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
 }
 
-@mixin img-grid($fit: cover) {
+@mixin img-responsive-grid($fit: cover) {
   object-fit: $fit;
   width: 100%;
   height: 100%;
@@ -19,36 +19,4 @@
 @mixin fontSize($size) {
   font-size: $size; //Fallback in px
   font-size: calculateRem($size);
-}
-
-.image--center {
-  object-position: 50% 50%;
-}
-
-.image--bottom-right {
-  object-position: 100% 100%;
-}
-
-.image--bottom-left {
-  object-position: 0 100%;
-}
-
-.image--top-left {
-  object-position: 0 0;
-}
-
-.image--up {
-  object-position: 50% 120%;
-}
-
-.image--down {
-  object-position: 50% -20%;
-}
-
-.image--left {
-  object-position: 120% 50%;
-}
-
-.image--right {
-  object-position: -20% 50%;
 }
